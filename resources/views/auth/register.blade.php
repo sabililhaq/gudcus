@@ -10,7 +10,7 @@
             @csrf
 
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-label for="name" value="{{ __('Nama') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
@@ -25,9 +25,29 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-label for="password_confirmation" value="{{ __('Konfirmasi Password') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
+
+            <div class="mt-4">
+                <x-jet-label for="address" value="{{ __('Alamat') }}" />
+                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="phone_number" value="{{ __('Nomor Telepon') }}" />
+                <x-jet-input id="phone_number" class="block mt-1 w-full" type="text" name="phone_number" :value="old('phone_number')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="role_id" value="{{ __('Daftar sebagai:') }}" />
+                <select name="role_id" x-model="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                    <option value="2">Kuli</option>
+                    <option value="3">Mandor</option>
+                </select>
+            </div>
+
+            
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
@@ -52,7 +72,7 @@
                 </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Daftar') }}
                 </x-jet-button>
             </div>
         </form>
