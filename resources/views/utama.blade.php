@@ -92,29 +92,29 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        <h3 class="h4 mb-2">Pengajuan Diri</h3>
+                        <p class="text-muted mb-0">Kuli dapat mengajukan diri menjadi status siap dipanggil kapanpun.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Up to Date</h3>
-                        <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        <h3 class="h4 mb-2">Pasang Proyek</h3>
+                        <p class="text-muted mb-0">Mandor dapat memasang proyek dengan harapan kuli akan mendaftarkan diri.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Ready to Publish</h3>
-                        <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                        <h3 class="h4 mb-2">Cari Kuli</h3>
+                        <p class="text-muted mb-0">Mandor dapat memilih kuli yang telah melakukan pengajuan diri.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Made with Love</h3>
-                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        <h3 class="h4 mb-2">Artikel</h3>
+                        <p class="text-muted mb-0">Kuli dan Mandor dapat berbagi tentang kehidupan perkulian duniawi.</p>
                     </div>
                 </div>
             </div>
@@ -181,13 +181,13 @@
             </div>
         </div>
     </div>
-    <!-- Call to action-->
+    {{-- <!-- Call to action-->
     <section class="page-section bg-dark text-white">
         <div class="container text-center">
             <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
             <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
         </div>
-    </section>
+    </section> --}}
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
@@ -202,12 +202,12 @@
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                     <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div>+1 (555) 123-4567</div>
+                    <div>+628 211 912 2125</div>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                     <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                    <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                    <a class="d-block" href="mailto:contact@yourwebsite.com">dotasabili@gmail.com</a>
                 </div>
             </div>
         </div>
