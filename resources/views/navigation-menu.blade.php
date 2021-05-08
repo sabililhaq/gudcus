@@ -27,11 +27,11 @@
                     @endif
 
                     @if (auth()->user()->role_id == 3 || auth()->user()->role_id == 1)
-                        <x-jet-nav-link href="{{ route('kuli.ajukandiri.index') }}" :active="request()->routeIs('kuli.ajukandiri.index')">
+                        <x-jet-nav-link href="{{ route('mandor.carikuli.index') }}" :active="request()->routeIs('mandor.carikuli.index')">
                             {{ __('Cari Kuli') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('kuli.cariproyek.index') }}" :active="request()->routeIs('kuli.cariproyek.index')">
+                        <x-jet-nav-link href="{{ route('mandor.pasangproyek.index') }}" :active="request()->routeIs('mandor.pasangproyek.index')">
                             {{ __('Pasang Proyek') }}
                         </x-jet-nav-link>
                     @endif

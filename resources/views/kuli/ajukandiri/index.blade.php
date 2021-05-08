@@ -1,7 +1,7 @@
 <x-kuli-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Lessons List') }}
+            {{ __('Ajukan Diri') }}
         </h2>
     </x-slot>
 
