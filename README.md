@@ -7,7 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## How to Clone
+
+1. Create new xampp\htdocs directory, example : laravel-app.
+2. Open terminal, type : 'git clone https://github.com/Xavionic/aplikasi_kuli'.
+3. After successfully clone project, get into your directory and type : 'composer install'.
+4. Inside project repository, rename .env.example file into .env and change your .env configuration, example: change database name.
+5. Run 'php artisan config:cache' and 'php artisan key:generate'
+6. Last but not least, run 'php artisan migrate --seed' to migrate the database
+7. You can make your own virtual host, recommended vhost name : nguli.id
+
+
+
+<!-- ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -19,9 +31,9 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Laravel is accessible, powerful, and provides tools required for large, robust applications. -->
 
-## Learning Laravel
+<!-- ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
@@ -59,4 +71,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
