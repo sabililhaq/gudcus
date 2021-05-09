@@ -1,4 +1,4 @@
-<x-kuli-layout>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Cari Proyek') }}
@@ -10,4 +10,4 @@
             Accessible only for kuli [Cari Proyek].
         </div>
     </div>
-</x-kuli-layout>
+</x-app-layout>

@@ -21,6 +21,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/artikel', function () {
+    return view('artikel');
+})->name('artikel');
+
 // Route::middleware(['auth:sanctum', 'verified'])->get('/kuli/ajukandiri', function () {
 //     return view('kuli.ajukandiri.index');
 // })->name('kuli1');

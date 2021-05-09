@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-yellow-300 border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -35,7 +35,10 @@
                             {{ __('Pasang Proyek') }}
                         </x-jet-nav-link>
                     @endif
-
+                    
+                    <x-jet-nav-link href="{{ route('artikel') }}" :active="request()->routeIs('artikel')">
+                        {{ __('Artikel') }}
+                    </x-jet-nav-link>
                     
                 </div>
 

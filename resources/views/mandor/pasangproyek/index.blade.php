@@ -1,4 +1,4 @@
-<x-mandor-layout>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Pasang Proyek') }}
@@ -10,4 +10,4 @@
             Accessible only for mandor.
         </div>
     </div>
-</x-mandor-layout>
+</x-app-layout>
