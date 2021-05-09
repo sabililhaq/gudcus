@@ -7,7 +7,7 @@
 
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-            <div class="container p-3 my-3 bg-light">
+            <div class="container p-3 my-3 bg-info rounded-3">
                 <div class="col-12">
                     <div class="card">
                       <div class="card-header">
@@ -46,10 +46,13 @@
                         </div>
                       </div>
                     </div>
+                  <p class="text-black">#Keterangan : klik nama proyek untuk melihat detail</p>
+
                   </div>
+
             </div>
 
-            <div class="container p-3 my-3 bg-light text-black">
+            <div class="container p-3 my-3 bg-primary text-black">
                 <div class="row">
                     <div class="col-12">
                         <div class="card">

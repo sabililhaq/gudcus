@@ -10,7 +10,7 @@
             {{-- <div class="col-12 col-md-6 col-lg-6"> --}}
 
 
-            <div class="container p-3 my-3 bg-light text-black">
+            <div class="container p-3 my-3 bg-primary text-black rounded-3">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="card">
@@ -41,18 +41,20 @@
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Status Anda Saat Ini</h4>
+                                <h4 class="card-title">Keterangan</h4>
                             </div>
                             <div class="card-body">
                                 @if (auth()->user()->kuli_availability == 0)
                                 <div class="card-body">
-                                    <p class="card-text">Tidak siap panggil (Unavailable)</p>
+                                    <p class="card-text">Status Anda saat ini tidak siap panggil (Unavailable)</p>
                                 </div>
                                 @endif
 
                                 @if (auth()->user()->kuli_availability == 1)
                                 <div class="card-body">
-                                    <p class="card-text">Siap panggil (Available)</p>
+                                    <p class="card-text">Status Anda saat ini siap panggil (Available)</p>
+                                    <p class="card-text">Anda akan langsung dihubungi mandor jika ada panggilan melalui nomor telepon anda.</p>
+
                                 </div>
                                 @endif
                             </div>

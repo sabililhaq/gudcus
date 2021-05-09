@@ -78,7 +78,7 @@
                     <h2 class="text-black mt-0">Tentang Kami</h2>
                     <hr class="divider light my-4" />
                     <p class="text-black-50 mb-4">Nguli.id adalah sebuah marketplace jasa seorang kuli bangunan yang akan menghubungkan antara kuli bangunan dengan seorang mandor bangunan pada sebuah proyek yang sama.</p>
-                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Detail</a>
                 </div>
             </div>
         </div>

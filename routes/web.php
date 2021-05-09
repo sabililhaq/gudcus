@@ -29,14 +29,6 @@ Route::post('/mandor/pasangproyek/detailproyek', function(){
     return view('mandor.pasangproyek.detailproyek');
 });
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/kuli/ajukandiri', function () {
-//     return view('kuli.ajukandiri.index');
-// })->name('kuli1');
-
-// Route::middleware(['auth:sanctum', 'verified'])->get('/kuli/cariproyek', function () {
-//     return view('kuli.cariproyek.index');
-// })->name('kuli2');
-
 Route::group(['middleware' => 'auth'], function () {
     // Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
     //     Route::resource('lessons', \App\Http\Controllers\Students\LessonController::class);
