@@ -25,6 +25,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/artikel', function () {
     return view('artikel');
 })->name('artikel');
 
+Route::post('/mandor/pasangproyek/detailproyek', function(){
+    return view('mandor.pasangproyek.detailproyek');
+});
+
 // Route::middleware(['auth:sanctum', 'verified'])->get('/kuli/ajukandiri', function () {
 //     return view('kuli.ajukandiri.index');
 // })->name('kuli1');

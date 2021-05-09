@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-user-friends text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Pengajuan Diri</h3>
                         <p class="text-muted mb-0">Kuli dapat mengajukan diri menjadi status siap dipanggil kapanpun.</p>
                     </div>
@@ -215,7 +215,7 @@
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
+            <div class="small text-center text-muted">Copyright © 2020 - Pemweb</div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
