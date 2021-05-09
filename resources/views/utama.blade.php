@@ -63,7 +63,7 @@
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">Media penjembatan antar mandor dengan kuli bangunan
+                    <p class="text-white-75 font-weight-light mb-5">Sebuah Media yang menjembatani antara mandor dengan kuli bangunan dalam pengerjaan proyek bagunan
                     </p>
                     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Tentang Kami</a>
                 </div>
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">Tentang Kami</h2>
+                    <h2 class="text-black mt-0">Tentang Kami</h2>
                     <hr class="divider light my-4" />
-                    <p class="text-white-50 mb-4">Nguli.id adalah marketplace jasa yang menghubungkan kuli bangunan dengan mandor bangunan.</p>
+                    <p class="text-black-50 mb-4">Nguli.id adalah sebuah marketplace jasa seorang kuli bangunan yang akan menghubungkan antara kuli bangunan dengan seorang mandor bangunan pada sebuah proyek yang sama.</p>
                     <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
                 </div>
             </div>
@@ -91,30 +91,30 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-user-friends text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-user text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Pengajuan Diri</h3>
-                        <p class="text-muted mb-0">Kuli dapat mengajukan diri menjadi status siap dipanggil kapanpun.</p>
+                        <p class="text-muted mb-0">Kuli dapat mengajukan dirinya menjadi dalam status siap dipanggil oleh mandor kapanpun.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-building text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Pasang Proyek</h3>
                         <p class="text-muted mb-0">Mandor dapat memasang proyek dengan harapan kuli akan mendaftarkan diri.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-search text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Cari Kuli</h3>
-                        <p class="text-muted mb-0">Mandor dapat memilih kuli yang telah melakukan pengajuan diri.</p>
+                        <p class="text-muted mb-0">Mandor dapat memilih kuli yang telah mengajukan diri kepada proyeknya.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+                        <i class="fas fa-4x fa-newspaper text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Artikel</h3>
-                        <p class="text-muted mb-0">Kuli dan Mandor dapat berbagi tentang kehidupan perkulian duniawi.</p>
+                        <p class="text-muted mb-0">Kuli dan Mandor dapat berbagi informasi tentang kehidupan dan berita terkini perproyekan bangunan.</p>
                     </div>
                 </div>
             </div>
@@ -193,16 +193,16 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <h2 class="mt-0">Mari Ketahui Kami Lebih Lanjut</h2>
                     <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an
-                        email and we will get back to you as soon as possible!</p>
+                    <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungai kami dinomor berikut
+                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama Majukan Kuli Indonesia</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                     <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div>+628 211 912 2125</div>
+                    <div>0857-3653-4000</div>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
@@ -215,7 +215,7 @@
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Pemweb</div>
+            <div class="small text-center text-muted">Copyright © 2021 - Kelompok 7 PEMWEB</div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
