@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mandor;
 use App\Models\Proyek;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PasangProyekController extends Controller
 {
@@ -11,6 +12,33 @@ class PasangProyekController extends Controller
     public function index(){
         $proyek = Proyek::all()->where('user_id', '=', auth()->user()->id);
         return view('mandor.pasangproyek.index', ['proyek' => $proyek]);
+    }
+
+    public function delete(){
+        $id = request('id_proyek');
+        DB::delete('delete from proyeks where id = '.$id);
+        return Redirect('/mandor/pasangproyek');
+        
+    }
+
+    public function new()
+    {
+        $id = auth()->user()->id;
+        Proyek::create([
+            'user_id' => $id,
+            'name' => request('nama'),
+            'address' => request('lokasi'),
+            'detail' => request('detail'),
+            'specialties_needed' => request('spek'),
+        ]);
+
+        return Redirect('/mandor/pasangproyek');
+
+        // $id = auth()->user()->id;
+        // $user = User::find($id);
+        // $user->kuli_availability = '0';
+        // $user->save();
+        // return Redirect('/kuli/ajukandiri');
     }
     /**
      * Show the form for creating a new resource.

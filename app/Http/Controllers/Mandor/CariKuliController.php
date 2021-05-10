@@ -11,7 +11,7 @@ class CariKuliController extends Controller
     //
     public function index(){
         // $kuli_available = DB::table('users')->where('kuli_availability', '=', '1')->get();
-        $kuli_available = User::all()->where('kuli_availability', '=', '1');
+        $kuli_available = User::all()->where('kuli_availability', '=', '1')->where('role_id', '=', '2');
         return view('mandor.carikuli.index', ['kuli_available' => $kuli_available]);
     }
 

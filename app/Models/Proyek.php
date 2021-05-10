@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Proyek extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id', 'name', 'address', 'detail', 'specialties_needed'
+    ];
 }
