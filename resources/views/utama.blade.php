@@ -196,7 +196,7 @@
                     <h2 class="mt-0">Mari Ketahui Kami Lebih Lanjut</h2>
                     <hr class="divider my-4" />
                     <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungai kami dinomor berikut
-                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama Majukan Kuli Indonesia</p>
+                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama Kuli Membangun Negeri, Hidup kuli Indonesia!</p>
                 </div>
             </div>
             <div class="row">

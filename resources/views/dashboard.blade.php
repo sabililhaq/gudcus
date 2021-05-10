@@ -6,9 +6,18 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+        <div class="container">
+            <div class="hero text-white hero-bg-image hero-bg-parallax"
+                style="background-image: url('assets/img/gambar-kuli1.jpg');">
+                <div class="hero-inner">
+                    <h2>Halo, {{ auth()->user()->name }} !</h2>
+                    <p class="lead">Selamat datang di nguli.id, Bersama kuli membangun negeri, bersama mandor anti
+                        kendor</p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="far fa-user"></i>
+                            Setup Account</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

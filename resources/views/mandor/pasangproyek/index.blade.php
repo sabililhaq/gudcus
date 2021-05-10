@@ -41,15 +41,28 @@
                                             <td>{{ $p->address }}</td>
                                             <td>{{ $p->specialties_needed }}</td>
                                             <td>
-                                                <form action = "{{ url('/hapusproyek') }}" method="post">
+                                                <form action="{{ url('/hapusproyek') }}" method="post">
                                                     @csrf
-                                                    <input type = "hidden" id = "id_proyek" name = "id_proyek" value = {{ $p->id }}>
-                                                    <button type = "submit" class="btn btn-danger">Hapus</button>
+                                                    <input type="hidden" id="id_proyek" name="id_proyek"
+                                                        value={{ $p->id }}>
+                                                    <button type="submit" class="btn btn-danger">Hapus</button>
                                                 </form>
                                             </td>
                                         </tr>
                                         @endforeach
                                         @endif
+
+                                        <script>
+                                            deleteButtons = document.querySelectorAll('.btn');
+                                            deleteButtons.forEach(btn => {
+                                                btn.addEventListener('click', () => {
+                                                    let konfirmasi = confirm(
+                                                        'Apakah anda yakin menghapus Proyek ' + btn
+                                                        .dataset.nama + ' ?');
+                                                });
+                                            });
+
+                                        </script>
 
 
 
@@ -74,7 +87,7 @@
                             </div>
                             <div class="card-body">
 
-                                <form action = "{{ url('/proyekbaru') }}" method="post">
+                                <form action="{{ url('/proyekbaru') }}" method="post">
                                     @csrf
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
@@ -83,7 +96,7 @@
                                             <input type="text" id="nama" name="nama">
                                         </div>
                                     </div>
-    
+
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Lokasi
                                             Proyek</label>
@@ -91,7 +104,7 @@
                                             <input type="text" id="lokasi" name="lokasi">
                                         </div>
                                     </div>
-    
+
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Detail
                                             Proyek</label>
@@ -99,7 +112,7 @@
                                             <input type="text" id="detail" name="detail">
                                         </div>
                                     </div>
-    
+
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Spesifikasi
                                             Kuli Dibutuhkan</label>
@@ -107,11 +120,11 @@
                                             <input type="text" id="spek" name="spek">
                                         </div>
                                     </div>
-    
+
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                         <div class="col-sm-12 col-md-7">
-                                            <button type= "submit" class="btn btn-primary">Pasang</button>
+                                            <button type="submit" class="btn btn-primary">Pasang</button>
                                         </div>
                                     </div>
                                 </form>
