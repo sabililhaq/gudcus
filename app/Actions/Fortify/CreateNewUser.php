@@ -37,6 +37,8 @@ class CreateNewUser implements CreatesNewUsers
                 'role_id' => $input['role_id'],
                 'address' => $input['address'],
                 'phone_number' => $input['phone_number'],
+                'kuli_specialties' => $input['kuli_specialties'],
+
 
             ]), function (User $user) {
                 $this->createTeam($user);

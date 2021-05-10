@@ -34,7 +34,7 @@
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Artikel</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#article">Artikel</a></li>
                     {{-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/dashboard') }}">Masuk</a>
                     </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/dashboard') }}">Daftar</a>
@@ -121,7 +121,7 @@
         </div>
     </section>
     <!-- Portfolio-->
-    <div id="portfolio">
+    <div id="article">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-lg-4 col-sm-6">

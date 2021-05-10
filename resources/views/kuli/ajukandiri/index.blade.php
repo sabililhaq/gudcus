@@ -27,15 +27,48 @@
 
                             @if (auth()->user()->kuli_availability == 0)
                             <div class="card-footer text-right">
-                                <button class="btn btn-primary">Ajukan Diri</button>
+                                <form action="{{ url('/ready') }}" method="post">
+                                    @csrf
+                                    <button type = "submit" id="tombol" class="btn btn-primary" data-status="1">Ajukan Diri</button>
+                                </form>
                             </div>
                             @endif
 
                             @if (auth()->user()->kuli_availability == 1)
                             <div class="card-footer text-right">
-                                <button class="btn btn-danger">Batal Ajukan Diri</button>
+                                {{-- <form method="post">
+
+                                </form> --}}
+                                <form action="{{ url('/cancel') }}" method="post">
+                                    @csrf
+                                    <button type = "submit" id="tombol" class="btn btn-danger" data-status="0">Batal Ajukan Diri</button>
+                                    
+                                </form>
                             </div>
                             @endif
+
+                            {{-- <script>
+                                function ready() {
+                                    alert("Berhasil mengajukan diri dan mengubah status anda.");
+                                    location.reload();
+                                }
+
+                                function cancel() {
+                                    alert("Berhasil membatalkan pengajuan diri.");
+                                    location.reload();
+                                }
+
+                                // const ajukan = document.getElementById("ajukandiri");
+                                let batalkan = document.getElementById("tombol");
+                                batalkan.addEventListener("click", function () {
+                                    if (batalkan.dataset.status == "1") {
+                                        ready;
+                                    } else {
+                                        cancel;
+                                    }
+                                })
+                            </script> --}}
+
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
@@ -53,7 +86,8 @@
                                 @if (auth()->user()->kuli_availability == 1)
                                 <div class="card-body">
                                     <p class="card-text">Status Anda saat ini siap panggil (Available)</p>
-                                    <p class="card-text">Anda akan langsung dihubungi mandor jika ada panggilan melalui nomor telepon anda.</p>
+                                    <p class="card-text">Anda akan langsung dihubungi mandor jika ada panggilan melalui
+                                        nomor telepon anda.</p>
 
                                 </div>
                                 @endif

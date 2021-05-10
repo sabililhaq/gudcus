@@ -6,7 +6,7 @@
 
         <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" x-data="{role_id: 2}">
             @csrf
 
             <div>
@@ -45,6 +45,11 @@
                     <option value="2">Kuli</option>
                     <option value="3">Mandor</option>
                 </select>
+            </div>
+
+            <div class="mt-4" x-show="role_id == 2">
+                <x-jet-label for="kuli_specialties" value="{{ __('Spesialisasi') }}" />
+                <x-jet-input id="kuli_specialties" class="block mt-1 w-full" type="text" :value="old('kuli_specialties')" name="kuli_specialties" requried/>
             </div>
 
             

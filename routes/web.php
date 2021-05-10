@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Kuli\AjukanDiriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/artikel', function () {
 Route::post('/mandor/pasangproyek/detailproyek', function(){
     return view('mandor.pasangproyek.detailproyek');
 });
+
+Route::post('/ready', '\App\Http\Controllers\Kuli\AjukanDiriController@ready');
+
+Route::post('/cancel', '\App\Http\Controllers\Kuli\AjukanDiriController@cancel');
 
 Route::group(['middleware' => 'auth'], function () {
     // Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
