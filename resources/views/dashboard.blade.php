@@ -7,8 +7,7 @@
 
     {{-- <div class="py-12"> --}}
     {{-- <div class="container"> --}}
-    <div class="hero text-white hero-bg-image hero-bg-parallax"
-        style="background-image: url('assets/img/gambar-kuli1.jpg');">
+    <div class="hero text-white bg-primary hero-bg-parallax">
         <div class="hero-inner">
 
             <div class="container">
@@ -16,7 +15,6 @@
                 <h2>Halo, {{ auth()->user()->name }} !</h2>
                 <p class="lead">Selamat datang di nguli.id, <br>Bersama kuli membangun negeri, Bersama mandor anti
                     kendor</p>
-                <br>
                 @if (auth()->user()->role_id == '2')
                 <p>Jadilah kuli yang profesional</p>
                 @else
@@ -29,62 +27,64 @@
                 </div>
             </div>
 
-            <div class="container p-3 mt-5">
+            
 
 
-                <div class="card">
-                    {{-- <div class="card-header">
-                          <h4>Mekanisme Layanan Nguli.id</h4>
-                        </div> --}}
-                    <div class="card-body">
-                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class=""></li>
-                                <li data-target="#carouselExampleIndicators2" data-slide-to="1" class="active"></li>
-                                <li data-target="#carouselExampleIndicators2" data-slide-to="2" class=""></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/img/gambar-tanah.jpg" alt="First slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Heading</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="assets/img/gambar-rumah.jpg" alt="Second slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Heading</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/img/gambar-kuli1.jpg" alt="Third slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Heading</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
+        </div>
+    </div>
+
+    <div class="container p-3 mt-5">
+
+
+        <div class="card">
+            {{-- <div class="card-header">
+                  <h4>Mekanisme Layanan Nguli.id</h4>
+                </div> --}}
+            <div class="card-body">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="0" class=""></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="1" class="active"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="2" class=""></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/gambar-tanah.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Heading</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                        </div>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/img/gambar-rumah.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Heading</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/gambar-kuli1.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Heading</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-
-
         </div>
     </div>
     {{-- </div> --}}

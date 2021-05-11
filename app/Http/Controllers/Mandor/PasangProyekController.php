@@ -15,10 +15,16 @@ class PasangProyekController extends Controller
     }
 
     public function delete(){
-        $id = request('id_proyek');
+        $id = request('proyek_id');
         DB::delete('delete from proyeks where id = '.$id);
         return Redirect('/mandor/pasangproyek');
         
+    }
+
+    public function detail(){
+        $proyek = Proyek::all()->where('id', '=', request('proyek_id'));
+        // dump($mandor);
+        return view('mandor.pasangproyek.detailproyek', ['proyek' => $proyek]);
     }
 
     public function new()

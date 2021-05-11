@@ -37,6 +37,8 @@ Route::post('/mandor/carikuli/detailkuli', function(){
 
 Route::get('/kuli/cariproyek/detail', '\App\Http\Controllers\Kuli\CariProyekController@detail');
 
+Route::get('/mandor/pasangproyek/detailproyek', '\App\Http\Controllers\Mandor\PasangProyekController@detail');
+
 Route::post('/ready', '\App\Http\Controllers\Kuli\AjukanDiriController@ready');
 
 Route::post('/cancel', '\App\Http\Controllers\Kuli\AjukanDiriController@cancel');
