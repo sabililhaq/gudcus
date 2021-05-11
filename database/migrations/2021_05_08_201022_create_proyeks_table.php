@@ -20,7 +20,6 @@ class CreateProyeksTable extends Migration
             $table->string('address');
             $table->string('detail')->nullable();
             $table->string('specialties_needed');
-            $table->foreignId('status_id')->nullable();
             $table->timestamps();
         });
     }

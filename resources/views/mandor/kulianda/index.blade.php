@@ -13,7 +13,9 @@
         <div class="container p-3 my-3 bg-primary rounded-3">
             <div class="col-12">
                 <div class="card">
-
+                    <div class="card-header">
+                        <h4>Kuli Anda</h4>
+                    </div>
 
                     <div class="card-body p-0">
                         <div class="table-responsive">
@@ -52,16 +54,65 @@
                                             <img alt="image" src='/assets/img/avatar/avatar-4.png'
                                                 class="rounded-circle" width="35" data-toggle="tooltip" title="">
                                         </td>
-                                        <td>{{ $k->name }}</td>
-                                        <td>{{ $k->address }}</td>
-                                        <td>{{ $k->phone_number }}</td>
-                                        <td>
-                                            <form action="#" method="post">
-                                                @csrf
-                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
-                                                <button type="submit" class="btn btn-primary">Selesai</a>
-                                            </form>
-                                        </td>
+                                        <th>{{ $k->name }}</th>
+                                        <th>{{ $k->address }}</th>
+                                        <th>{{ $k->phone_number }}</th>
+
+                                        @if ($k->status_id == '1')
+                                        @foreach ($statuses as $s)
+                                        @if ($s->id == $k->status_id)
+                                        <th>{{ $s->name }}</th>
+                                        <th>
+                                            <a href="{{ url('/mandor/pasangproyek') }}"
+                                                class="btn btn-primary">Tentukan</a>
+                                        </th>
+                                        @endif
+                                        @endforeach
+
+                                        @elseif ($k->status_id == '2')
+                                        @foreach ($statuses as $s)
+                                        @if ($s->id == $k->status_id)
+                                        <th>{{ $s->name }}</th>
+                                        <th>
+                                            <a href="{{ url('/mandor/pasangproyek') }}"
+                                                class="btn btn-success">Selesai</a>
+                                        </th>
+                                        @endif
+                                        @endforeach
+
+                                        @elseif ($k->status_id == '3')
+                                        @foreach ($statuses as $s)
+                                        @if ($s->id == $k->status_id)
+                                        <th>{{ $s->name }}</th>
+                                        <th>
+                                            <a href="{{ url('/mandor/pasangproyek') }}"
+                                                class="btn btn-warning">Batal</a>
+                                        </th>
+                                        @endif
+                                        @endforeach
+
+                                        @elseif ($k->status_id == '4')
+                                        @foreach ($statuses as $s)
+                                        @if ($s->id == $k->status_id)
+                                        <th>{{ $s->name }}</th>
+                                        <th>
+                                            <a href="{{ url('/mandor/pasangproyek') }}"
+                                                class="btn btn-danger">Batal</a>
+                                        </th>
+                                        @endif
+                                        @endforeach
+
+                                        @elseif ($k->status_id == '5')
+                                        @foreach ($statuses as $s)
+                                        @if ($s->id == $k->status_id)
+                                        <th>{{ $s->name }}</th>
+                                        <th>
+                                            <a href="{{ url('/mandor/pasangproyek') }}"
+                                                class="btn btn-info">Hapus</a>
+                                        </th>
+                                        @endif
+                                        @endforeach
+                                        @endif
                                     </tr>
                                     @endforeach
                                     @endif

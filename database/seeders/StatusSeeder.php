@@ -16,6 +16,11 @@ class StatusSeeder extends Seeder
     public function run()
     {
         //
-        Status::create(['id' => '0','name' => 'Administrator']);
+        Status::create(['id' => '1','name' => 'Menunggu Penerimaan Anda']);
+        Status::create(['id' => '2','name' => 'Sedang Bekerja Pada Anda']);
+        Status::create(['id' => '3','name' => 'Menunggu Konfirmasi Pelepasan Kuli']);
+        Status::create(['id' => '4','name' => 'Belum Menerima Panggilan Anda']);
+        Status::create(['id' => '5','name' => 'Menolak Panggilan Anda']);
+
     }
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Mandor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Status;
+
 
 
 class KuliAndaController extends Controller
@@ -18,7 +20,9 @@ class KuliAndaController extends Controller
     {
         //
         $kuli_available = User::all()->where('works_under', '=', auth()->user()->id)->where('role_id', '=', '2');
-        return view('mandor.kulianda.index', ['kulis' => $kuli_available]);
+        $statuses = Status::all();
+
+        return view('mandor.kulianda.index', ['kulis' => $kuli_available, 'statuses' => $statuses]);
     }
 
     /**
