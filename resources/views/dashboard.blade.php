@@ -33,10 +33,10 @@
         </div>
     </div>
 
-    <div class="container p-3 mt-">
+    <div class="container p-5">
 
 
-        <div class="card p-3">
+        <div class="card p-5 bg-info">
             {{-- <div class="card-header">
                   <h4>Mekanisme Layanan Nguli.id</h4>
                 </div> --}}

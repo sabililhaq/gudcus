@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Mandor;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Controllers\Controller;
