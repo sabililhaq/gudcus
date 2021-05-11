@@ -49,6 +49,13 @@ Route::post('/proyekbaru', '\App\Http\Controllers\Mandor\PasangProyekController@
 
 Route::post('/hapusproyek', '\App\Http\Controllers\Mandor\PasangProyekController@delete');
 
+Route::post('/mandor/carikuli/detailkuli', '\App\Http\Controllers\Mandor\CariKuliController@detail');
+
+Route::post('/panggil', '\App\Http\Controllers\Mandor\CariKuliController@call');
+
+
+
+
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -70,6 +77,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['middleware' => 'role:mandor', 'prefix' => 'mandor', 'as' => 'mandor.'], function () {
         Route::resource('pasangproyek', \App\Http\Controllers\Mandor\PasangProyekController::class);
+    });
+
+    Route::group(['middleware' => 'role:mandor', 'prefix' => 'mandor', 'as' => 'mandor.'], function () {
+        Route::resource('kulianda', \App\Http\Controllers\Mandor\KuliAndaController::class);
     });
 
 

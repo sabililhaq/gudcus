@@ -38,6 +38,10 @@
                         <x-jet-nav-link href="{{ route('mandor.pasangproyek.index') }}" :active="request()->routeIs('mandor.pasangproyek.index')">
                             {{ __('Pasang Proyek') }}
                         </x-jet-nav-link>
+
+                        <x-jet-nav-link href="{{ route('mandor.pasangproyek.index') }}" :active="request()->routeIs('mandor.pasangproyek.index')">
+                            {{ __('Kuli Anda') }}
+                        </x-jet-nav-link>
                     @endif
                     
                     <x-jet-nav-link href="{{ route('artikel') }}" :active="request()->routeIs('artikel')">

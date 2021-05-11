@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Http\Controllers\Mandor;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
-use App\Models\User;
-use App\Http\Controllers\Controller;
 
-class CariKuliController extends Controller
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class KuliAndaController extends Controller
 {
-    //
-    public function index(){
-        // $kuli_available = DB::table('users')->where('kuli_availability', '=', '1')->get();
-        $kuli_available = User::all()->where('kuli_availability', '=', '1')->where('role_id', '=', '2');
-        return view('mandor.carikuli.index', ['kuli_available' => $kuli_available]);
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
     }
 
     /**
@@ -23,27 +25,6 @@ class CariKuliController extends Controller
     public function create()
     {
         //
-    }
-
-    public function detail(){
-        $kuli_id = request('kuli_id');
-        $profil = User::all()->where('id', '=', $kuli_id);
-        return view('mandor.carikuli.detailkuli', ['profil' => $profil]);
-    }
-
-    public function call(){
-        // $kuli_id = request('kuli_id');
-        // $profil = User::all()->where('id', '=', $kuli_id);
-        // return view('mandor.carikuli.detailkuli', ['profil' => $profil]);
-        $kuli_id = request('kuli_id');
-        $id = auth()->user()->id;
-        $user = User::find($id);
-        $user->called = '1';
-        $user->works_under = auth()->user()->id;
-        $user->save();
-
-        return Redirect('/mandor/carikuli');
-        
     }
 
     /**
@@ -65,7 +46,7 @@ class CariKuliController extends Controller
      */
     public function show($id)
     {
-        return view('mandor.carikuli.detailkuli');
+        //
     }
 
     /**

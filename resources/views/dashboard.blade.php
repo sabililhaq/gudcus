@@ -33,10 +33,10 @@
         </div>
     </div>
 
-    <div class="container p-3 mt-5">
+    <div class="container p-3 mt-">
 
 
-        <div class="card">
+        <div class="card p-3">
             {{-- <div class="card-header">
                   <h4>Mekanisme Layanan Nguli.id</h4>
                 </div> --}}
@@ -46,10 +46,11 @@
                         <li data-target="#carouselExampleIndicators2" data-slide-to="0" class=""></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="1" class="active"></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="2" class=""></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="3" class=""></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/img/gambar-tanah.jpg" alt="First slide">
+                            <img class="d-block w-100" src="assets/img/pengajuan_diri.png" alt="First slide">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Heading</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -57,7 +58,7 @@
                             </div>
                         </div>
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="assets/img/gambar-rumah.jpg" alt="Second slide">
+                            <img class="d-block w-100" src="assets/img/pencarian_proyek.png" alt="Second slide">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Heading</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -65,13 +66,22 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/img/gambar-kuli1.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="assets/img/pencarian_kuli.png" alt="Third slide">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Heading</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua.</p>
                             </div>
                         </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/img/pemasangan_proyek.png" alt="Forth slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Heading</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
                         data-slide="prev">
@@ -142,7 +152,7 @@
     </div> --}}
 
     {{-- <div class="py-12"> --}}
-    <div class="container p-3">
+    {{-- <div class="container p-3">
         <div class="card">
             <div class="card-header">
                 <h4>Mekanisme Pengajuan Diri</h4>
@@ -188,11 +198,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- </div> --}}
 
     {{-- <div class="py-12"> --}}
-    <div class="container">
+    {{-- <div class="container">
         <div class="card">
             <div class="card-header">
                 <h4>Mekanisme Pemasangan Proyek</h4>
@@ -240,6 +250,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- </div> --}}
 </x-app-layout>
