@@ -33,6 +33,40 @@
                                 </div>
                                 @endif
 
+                                @if (auth()->user()->applying == '1')
+                                
+                                <div class="hero align-items-center bg-success text-white">
+                                    <div class="hero-inner text-center">
+                                      <h2>Menunggu</h2>
+                                      @foreach ($proyeks as $p)
+                                          @if ($p->id == auth()->user()->proyek_id)
+                                            <p class="lead">Berhasil mendaftarkan diri ke proyek {{ $p->name }}</p>
+                                            <p class="lead">Anda akan dihubungi langsung oleh mandor jika diterima.</p>
+                                          @endif
+                                      @endforeach
+                                      <div class="mt-4">
+                                          <form action="{{ url('/batal') }}" method="post">
+                                              @csrf
+                                            <button type="submit" class="btn btn-outline-white btn-danger btn-icon icon-left" data-nama={{ $p->name }}>Batalkan</button>
+                                          </form>
+                                        {{-- <a href="#" class="btn btn-outline-white btn-danger btn-icon icon-left"><i class="fas fa-sign-in-alt"></i> Batalkan</a> --}}
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <script>
+                                    deleteButtons = document.querySelectorAll('.btn');
+                                    deleteButtons.forEach(btn => {
+                                        btn.addEventListener('click', () => {
+                                            // let konfirmasi = confirm(
+                                            //     'Apakah anda yakin mendaftar pada proyek ' + btn
+                                            //     .dataset.nama + ' ?');
+                                            const data = btn.dataset.nama;
+                                            alert('Berhasil membatalkan pendaftaran anda pada proyek ' + data);
+                                        });
+                                    });
+                                </script>
+                                @else
                                 @foreach ($proyeks as $p)
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                                     <article class="article">
@@ -50,26 +84,31 @@
                                             --}}
 
                                             @foreach ($users as $user)
-                                                @if($user->id == $p->user_id)
-                                                <p>Mandor : {{ $user->name }}</p>
-                                                <div class="article-cta">
-                                                    <form action="{{ url('/kuli/cariproyek/detail') }}" method="get">
-                                                        @csrf
-                                                        <input type="hidden" id="proyek_id" name="proyek_id" value={{ $p->id }}>
-                                                        <input type="hidden" id="mandor_id" name="mandor_id" value={{ $user->id }}>
-                                                        {{-- <a href="javascript:$('form').submit()">{{ $k->name }}</a> --}}
-                                                        <button type="submit" class="btn btn-primary">Detail</a>
-                                                    </form>
-                                                </div>
-                                                @endif
+                                            @if($user->id == $p->user_id)
+                                            <p>Mandor : {{ $user->name }}</p>
+                                            <div class="article-cta">
+                                                <form action="{{ url('/kuli/cariproyek/detail') }}" method="get">
+                                                    @csrf
+                                                    <input type="hidden" id="proyek_id" name="proyek_id"
+                                                        value={{ $p->id }}>
+                                                    <input type="hidden" id="mandor_id" name="mandor_id"
+                                                        value={{ $user->id }}>
+                                                    {{-- <a href="javascript:$('form').submit()">{{ $k->name }}</a> --}}
+                                                    <button type="submit" class="btn btn-primary">Detail</a>
+                                                </form>
+                                            </div>
+                                            @endif
                                             @endforeach
 
 
-                                            
+
                                         </div>
                                     </article>
                                 </div>
                                 @endforeach
+                                @endif
+
+
                             </div>
 
 

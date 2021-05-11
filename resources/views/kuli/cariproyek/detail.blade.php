@@ -109,15 +109,38 @@
 
                         </div>
 
+                        <div class="float-right mt-sm-0 mt-3 p-4">
+                            {{-- <a href="#" class="btn btn-danger mt-3 follow-btn" data-follow-action="alert('follow clicked');"
+                                data-unfollow-action="alert('unfollow clicked');" data-nama = {{ $p->name }}>Hapus</a> --}}
+                            <form action="{{ url('/kuli/cariproyek/daftar') }}" method="get">
+                                @csrf
+                                <input type="hidden" id="proyek_id" name="proyek_id" value={{ $p->id }}>
+                                <button type="submit" class="btn btn-primary" data-nama={{ $p->name }}>Daftar</button>
+                            </form>
+                        </div>
+
                         @endforeach
 
 
-                        <div class="float-right mt-sm-0 mt-3">
+                        {{-- <div class="float-right mt-sm-0 mt-3">
                             <a href="#" class="btn btn-primary mt-3 follow-btn"
                                 data-follow-action="alert('follow clicked');"
                                 data-unfollow-action="alert('unfollow clicked');">Daftar</a>
 
-                        </div>
+                        </div> --}}
+
+                        <script>
+                            deleteButtons = document.querySelectorAll('.btn');
+                            deleteButtons.forEach(btn => {
+                                btn.addEventListener('click', () => {
+                                    // let konfirmasi = confirm(
+                                    //     'Apakah anda yakin mendaftar pada proyek ' + btn
+                                    //     .dataset.nama + ' ?');
+                                    const data = btn.dataset.nama;
+                                    alert('Berhasil mendaftar pada proyek ini');
+                                });
+                            });
+                        </script>
 
 
 

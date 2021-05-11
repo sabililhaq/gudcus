@@ -1,6 +1,4 @@
 <?php
-
-use App\Http\Controllers\Kuli\AjukanDiriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +34,10 @@ Route::post('/mandor/carikuli/detailkuli', function(){
 
 
 Route::get('/kuli/cariproyek/detail', '\App\Http\Controllers\Kuli\CariProyekController@detail');
+
+Route::get('/kuli/cariproyek/daftar', '\App\Http\Controllers\Kuli\CariProyekController@apply');
+
+Route::post('/batal', '\App\Http\Controllers\Kuli\CariProyekController@cancel');
 
 Route::get('/mandor/pasangproyek/detailproyek', '\App\Http\Controllers\Mandor\PasangProyekController@detail');
 
