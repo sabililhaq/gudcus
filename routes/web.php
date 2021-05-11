@@ -41,6 +41,8 @@ Route::post('/batal', '\App\Http\Controllers\Kuli\CariProyekController@cancel');
 
 Route::get('/mandor/pasangproyek/detailproyek', '\App\Http\Controllers\Mandor\PasangProyekController@detail');
 
+Route::get('/mandor/pasangproyek/detailproyek/seleksi', '\App\Http\Controllers\Mandor\PasangProyekController@seleksi');
+
 Route::post('/ready', '\App\Http\Controllers\Kuli\AjukanDiriController@ready');
 
 Route::post('/cancel', '\App\Http\Controllers\Kuli\AjukanDiriController@cancel');

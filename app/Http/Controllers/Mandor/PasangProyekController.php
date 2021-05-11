@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mandor;
 use App\Models\Proyek;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,14 +18,28 @@ class PasangProyekController extends Controller
     public function delete(){
         $id = request('proyek_id');
         DB::delete('delete from proyeks where id = '.$id);
+        $users = User::all()->where('proyek_id', '=', request('proyek_id'));
+        foreach($users as $user){
+            $user->applying = '0';
+            $user->proyek_id = '0';
+            $user->save();
+        }
         return Redirect('/mandor/pasangproyek');
         
     }
 
+    public function seleksi(){
+        $kuli_id = request('kuli_id');
+        $profil = User::all()->where('id', '=', $kuli_id);
+        return view('mandor.pasangproyek.seleksi', ['profil' => $profil]);
+    }
+
     public function detail(){
         $proyek = Proyek::all()->where('id', '=', request('proyek_id'));
+        $kulis = User::all()->where('proyek_id', '=', request('proyek_id'));
+
         // dump($mandor);
-        return view('mandor.pasangproyek.detailproyek', ['proyek' => $proyek]);
+        return view('mandor.pasangproyek.detailproyek', ['proyek' => $proyek, 'kulis' => $kulis]);
     }
 
     public function new()

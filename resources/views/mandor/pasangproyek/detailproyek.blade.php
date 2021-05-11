@@ -5,6 +5,52 @@
         </h2>
     </x-slot>
 
+    
+    <div class="container p-3 my-3 bg-primary rounded-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Kuli Mendaftar</h4>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Spesialisasi</th>
+                                    <th>Action</th>
+                                </tr>
+
+                                @foreach ($kulis as $k)
+                                <tr>
+                                    <td>
+                                        <img alt="image" src='/assets/img/avatar/avatar-4.png'
+                                            class="rounded-circle" width="35" data-toggle="tooltip" title="">
+                                    </td>
+                                    <td>{{ $k->name }}</td>
+                                    <td>{{ $k->address }}</td>
+                                    <td>{{ $k->kuli_specialties }}</td>
+                                    <td>
+                                        <form action="{{ url('/mandor/pasangproyek/detailproyek/seleksi') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
+                                            {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
+                                            <button type="submit" class="btn-seleksi btn-primary">Seleksi</a>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="py-12">
 
@@ -125,7 +171,7 @@
                     <form action="{{ url('/hapusproyek') }}" method="post">
                         @csrf
                         <input type="hidden" id="proyek_id" name="proyek_id" value={{ $p->id }}>
-                        <button type="submit" class="btn btn-danger" data-nama={{ $p->name }}>Hapus</button>
+                        <button type="submit" class="btn-delete btn-danger" data-nama={{ $p->name }}>Hapus</button>
                     </form>
                 </div>
 
@@ -135,7 +181,7 @@
 
 
                 <script>
-                    deleteButtons = document.querySelectorAll('.btn');
+                    deleteButtons = document.querySelectorAll('.btn-delete');
                     deleteButtons.forEach(btn => {
                         btn.addEventListener('click', () => {
                             let konfirmasi = confirm(
