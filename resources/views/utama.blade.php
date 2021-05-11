@@ -34,7 +34,7 @@
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#article">Artikel</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Artikel</a></li>
                     {{-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/dashboard') }}">Masuk</a>
                     </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/dashboard') }}">Daftar</a>
@@ -78,7 +78,7 @@
                     <h2 class="text-black mt-0">Tentang Kami</h2>
                     <hr class="divider light my-4" />
                     <p class="text-black-50 mb-4">Nguli.id adalah sebuah marketplace jasa seorang kuli bangunan yang akan menghubungkan antara kuli bangunan dengan seorang mandor bangunan pada sebuah proyek yang sama.</p>
-                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Detail</a>
+                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
         </div>
     </section>
     <!-- Portfolio-->
-    <div id="article">
+    <div id="portfolio">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-lg-4 col-sm-6">
@@ -196,7 +196,7 @@
                     <h2 class="mt-0">Mari Ketahui Kami Lebih Lanjut</h2>
                     <hr class="divider my-4" />
                     <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungai kami dinomor berikut
-                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama Kuli Membangun Negeri, Hidup kuli Indonesia!</p>
+                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama Majukan Kuli Indonesia</p>
                 </div>
             </div>
             <div class="row">
@@ -213,11 +213,12 @@
         </div>
     </section>
     <!-- Footer-->
-    <footer class="bg-light py-5">
+    {{-- <footer class="bg-light py-5">
         <div class="container">
-            <div class="small text-center text-muted">Copyright © 2021 - Kelompok 7 PEMWEB</div>
+            <div class="small text-center text-muted">Copyright Â© 2021 - Kelompok 7 PEMWEB</div>
         </div>
-    </footer>
+    </footer> --}}
+    <x-footer/>
     <!-- Bootstrap core JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

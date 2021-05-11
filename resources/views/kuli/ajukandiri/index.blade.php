@@ -29,7 +29,9 @@
                             <div class="card-footer text-right">
                                 <form action="{{ url('/ready') }}" method="post">
                                     @csrf
-                                    <button type = "submit" id="tombol" class="btn btn-primary" data-status="1">Ajukan Diri</button>
+                                    <button type="submit" id="tombol" class="btn btn-primary" data-status="0">
+                                        <i class="fas fa-address-book"></i> Ajukan
+                                        Diri</button>
                                 </form>
                             </div>
                             @endif
@@ -41,11 +43,33 @@
                                 </form> --}}
                                 <form action="{{ url('/cancel') }}" method="post">
                                     @csrf
-                                    <button type = "submit" id="tombol" class="btn btn-danger" data-status="0">Batal Ajukan Diri</button>
-                                    
+                                    <button type="submit" id="tombol" class="btn btn-danger" data-status="1">
+                                        <i class="fas fa-times"></i> Batal
+                                        Ajukan Diri</button>
+
                                 </form>
                             </div>
                             @endif
+
+                            <script>
+                                function ready() {
+                                    alert('Berhasil mengajukan diri dan mengubah status Anda');
+                                }
+
+                                function cancel() {
+                                    alert('Berhasil membatalkan pengajuan diri dan mengubah status Anda');
+                                }
+                                const btn = document.querySelector('.btn');
+                                const data = btn.dataset.status;
+                                btn.addEventListener('click', () => {
+                                    if (data == "0") {
+                                        ready();
+                                    } else {
+                                        cancel();
+                                    }
+                                });
+
+                            </script>
 
                             {{-- <script>
                                 function ready() {

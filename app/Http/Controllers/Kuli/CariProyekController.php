@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Kuli;
 use App\Http\Controllers\Controller;
+use App\Models\Proyek;
+use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 
 use Illuminate\Http\Request;
@@ -10,7 +12,16 @@ class CariProyekController extends Controller
 {
     //
     public function index(){
-        return view('kuli.cariproyek.index');
+        $proyeks = Proyek::all();
+        $users = User::all();
+        return view('kuli.cariproyek.index', ['proyeks' => $proyeks, 'users' => $users]);
+    }
+
+    public function detail(){
+        $proyek = Proyek::all()->where('id', '=', request('proyek_id'));
+        $mandor = User::all()->where('id', '=', request('mandor_id'));
+        // dump($mandor);
+        return view('kuli.cariproyek.detail', ['proyek' => $proyek, 'mandor' => $mandor]);
     }
 
     /**

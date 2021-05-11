@@ -30,6 +30,11 @@
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
+            {{-- <div class="mt-4">
+                <x-jet-label for="phone_number" value="{{ __('Nomor Telepon') }}" />
+                <x-jet-input id="phone_number" class="block mt-1 w-full" type="text" name="phone_number" :value="old('phone_number')" required />
+            </div> --}}
+
             <div class="mt-4">
                 <x-jet-label for="address" value="{{ __('Alamat') }}" />
                 <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />

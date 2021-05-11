@@ -6,7 +6,7 @@
     </x-slot>
 
     <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+        {{-- <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8"> --}}
             <div class="container p-3 my-3 bg-info rounded-3">
                 <div class="col-12">
                     <div class="card">
@@ -17,22 +17,30 @@
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <tbody>
+                                        {{-- Contoh Data --}}
+                                        @if (count($proyek) == 0)
+                                        <tr>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                  <div class="empty-state" data-height="400" style="height: 400px;">
+                                                    <div class="empty-state-icon">
+                                                      <i class="fas fa-question"></i>
+                                                    </div>
+                                                    <h2>Anda belum memasang proyek</h2>
+                                                    <p class="lead">
+                                                      Silahkan mengisi formulir dibawah untuk memasang proyek, data proyek nantinya akan tampil disini
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </tr>
+                                        @else
                                         <tr>
                                             <th>Nama Proyek</th>
                                             <th>Lokasi</th>
                                             <th>Spesialisasi Kuli Dibutuhkan</th>
                                             <th>Action</th>
                                         </tr>
-
-                                        {{-- Contoh Data --}}
-                                        @if (count($proyek) == 0)
-                                        <tr>
-                                            <th>Anda belum memasang proyek.</th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                        @else
                                         @foreach ($proyek as $p)
                                         <tr>
                                             <td><a
@@ -43,9 +51,10 @@
                                             <td>
                                                 <form action="{{ url('/hapusproyek') }}" method="post">
                                                     @csrf
-                                                    <input type="hidden" id="id_proyek" name="id_proyek"
+                                                    <input type="hidden" id="proyek_id" name="proyek_id"
                                                         value={{ $p->id }}>
-                                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                                    <button type="submit" class="btn btn-danger"
+                                                        data-nama={{ $p->name }}>Hapus</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -63,10 +72,6 @@
                                             });
 
                                         </script>
-
-
-
-
                                     </tbody>
                                 </table>
                             </div>
@@ -74,11 +79,11 @@
                     </div>
                     <p class="text-black">#Keterangan : klik nama proyek untuk melihat detail atau edit</p>
 
-                </div>
+                {{-- </div> --}}
 
             </div>
 
-            <div class="container p-3 my-3 bg-primary text-black">
+            <div class="container p-4 my-3 bg-primary text-black rounded-3">
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -93,7 +98,7 @@
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
                                             Proyek</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" id="nama" name="nama">
+                                            <input type="text" id="nama" name="nama" required>
                                         </div>
                                     </div>
 
@@ -101,7 +106,7 @@
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Lokasi
                                             Proyek</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" id="lokasi" name="lokasi">
+                                            <input type="text" id="lokasi" name="lokasi" required>
                                         </div>
                                     </div>
 
@@ -109,7 +114,7 @@
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Detail
                                             Proyek</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" id="detail" name="detail">
+                                            <input type="text" id="detail" name="detail" required>
                                         </div>
                                     </div>
 
@@ -117,7 +122,7 @@
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Spesifikasi
                                             Kuli Dibutuhkan</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" id="spek" name="spek">
+                                            <input type="text" id="spek" name="spek" required>
                                         </div>
                                     </div>
 
@@ -130,7 +135,10 @@
                                 </form>
 
                             </div>
+                            
                         </div>
+                        #Keterangan : Detail proyek mencakup gaji dan posisi kuli
+
                     </div>
                 </div>
 

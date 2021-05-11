@@ -65,6 +65,20 @@
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
+        @if (auth()->user()->role_id == '2')
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="kuli_specialties" value="{{ __('Spesialisasi') }}" />
+                <x-jet-input id="kuli_specialties" type="text" class="mt-1 block w-full" wire:model.defer="state.kuli_specialties" />
+                <x-jet-input-error for="address" class="mt-2" />
+            </div>
+        @endif
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="address" value="{{ __('Alamat') }}" />
+            <x-jet-input id="address" type="text" class="mt-1 block w-full" wire:model.defer="state.address" />
+            <x-jet-input-error for="address" class="mt-2" />
+        </div>
     </x-slot>
 
     <x-slot name="actions">

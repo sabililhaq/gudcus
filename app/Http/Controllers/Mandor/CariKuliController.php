@@ -45,6 +45,12 @@ class CariKuliController extends Controller
     public function show($id)
     {
         //
+        dump($id);
+        // $id = request('kuli_id');
+        $profil = User::all()->where('id', '=', $id);
+        $profil = User::all();
+        dump($profil);
+        return view('mandor.carikuli.detailkuli', ['profil' => $profil]);
     }
 
     /**

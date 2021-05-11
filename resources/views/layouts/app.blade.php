@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('Nguli.id', 'Nguli.id') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -24,6 +24,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="../stisla/assets/css/style.css">
     <link rel="stylesheet" href="../stisla/assets/css/components.css">
+
 
     @livewireStyles
 
@@ -47,9 +48,22 @@
         @endif
 
         <!-- Page Content -->
-        <main>
+        <div class="hero text-black hero-bg-image hero-bg-parallax"
+            style="background-image: url('/assets/img/gambar-kuli1.jpg');">
+            <div class="hero-inner">
+                <main>
+                    {{ $slot }}
+                </main>
+            </div>
+        </div>
+
+        {{-- <main>
             {{ $slot }}
-        </main>
+        </main> --}}
+
+    </div>
+
+    <x-footer />
     </div>
 
     @stack('modals')

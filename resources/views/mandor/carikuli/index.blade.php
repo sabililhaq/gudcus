@@ -6,7 +6,7 @@
     </x-slot>
 
     <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+        {{-- <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8"> --}}
             <div class="container p-3 my-3 bg-primary rounded-3">
                 <div class="col-12">
                     <div class="card">
@@ -29,13 +29,19 @@
                                         <tr>
                                             <td>
                                                 <img alt="image" src='/assets/img/avatar/avatar-4.png'
-                                                    class="rounded-circle" width="35" data-toggle="tooltip" title=""
-                                                    data-original-title="Wildan Ahdian">
+                                                    class="rounded-circle" width="35" data-toggle="tooltip" title="">
                                             </td>
-                                            <td><a href = '#'>{{ $k->name }}</a></td>
+                                            <td>{{ $k->name }}</td>
                                             <td>{{ $k->address }}</td>
                                             <td>{{ $k->kuli_specialties }}</td>
-                                            <td><a href="#" class="btn btn-primary">Panggil</a></td>
+                                            <td>
+                                                <form action="{{ url('/mandor/carikuli/detailkuli') }}" method="post">
+                                                    @csrf
+                                                    <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
+                                                    {{-- <a href="javascript:$('form').submit()">{{ $k->name }}</a> --}}
+                                                    <button type="submit" class="btn btn-primary">Panggil</a>
+                                                </form>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -43,9 +49,8 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-white">#Keterangan : klik nama kuli untuk melihat detail</p>
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
     </div>
 </x-app-layout>
