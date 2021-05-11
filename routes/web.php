@@ -39,17 +39,28 @@ Route::get('/kuli/cariproyek/daftar', '\App\Http\Controllers\Kuli\CariProyekCont
 
 Route::post('/batal', '\App\Http\Controllers\Kuli\CariProyekController@cancel');
 
+Route::get('/legowo', '\App\Http\Controllers\Kuli\CariProyekController@legowo');
+
 Route::get('/mandor/pasangproyek/detailproyek', '\App\Http\Controllers\Mandor\PasangProyekController@detail');
 
-Route::get('/mandor/pasangproyek/detailproyek/seleksi', '\App\Http\Controllers\Mandor\PasangProyekController@seleksi');
+Route::get('/mandor/pasangproyek/seleksi', '\App\Http\Controllers\Mandor\PasangProyekController@seleksi');
+
 
 Route::post('/ready', '\App\Http\Controllers\Kuli\AjukanDiriController@ready');
 
 Route::post('/cancel', '\App\Http\Controllers\Kuli\AjukanDiriController@cancel');
 
+Route::post('/terimapanggilan', '\App\Http\Controllers\Kuli\AjukanDiriController@accept');
+
+Route::post('/tolakpanggilan', '\App\Http\Controllers\Kuli\AjukanDiriController@decline');
+
 Route::post('/proyekbaru', '\App\Http\Controllers\Mandor\PasangProyekController@new');
 
 Route::post('/hapusproyek', '\App\Http\Controllers\Mandor\PasangProyekController@delete');
+
+Route::post('/terima', '\App\Http\Controllers\Mandor\PasangProyekController@terima');
+
+Route::post('/tolak', '\App\Http\Controllers\Mandor\PasangProyekController@tolak');
 
 Route::post('/mandor/carikuli/detailkuli', '\App\Http\Controllers\Mandor\CariKuliController@detail');
 

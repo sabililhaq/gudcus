@@ -35,9 +35,10 @@ class CariKuliController extends Controller
         // $profil = User::all()->where('id', '=', $kuli_id);
         // return view('mandor.carikuli.detailkuli', ['profil' => $profil]);
         $kuli_id = request('kuli_id');
-        $id = auth()->user()->id;
-        $user = User::find($id);
+        $user = User::find($kuli_id);
         $user->called = '1';
+        $user->kuli_availability = '0';
+        $user->status_id = '4';
         $user->works_under = auth()->user()->id;
         $user->save();
 

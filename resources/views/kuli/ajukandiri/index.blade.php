@@ -10,7 +10,130 @@
             {{-- <div class="col-12 col-md-6 col-lg-6"> --}}
 
 
-            <div class="container p-3 my-3 bg-primary text-black rounded-3">
+
+            <div class="container p-3 my-3 bg-info text-black rounded-3">
+
+                @if (auth()->user()->called == 1 && auth()->user()->status_id == 4)
+
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Panggilan</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4>Anda mendapatkan panggilan dari:</h4>
+
+                            <div class="container p-1 rounded-3">
+                                <div class="card author-box card-primary">
+                                    <div class="card-body">
+
+                                        @foreach ($users as $p)
+                                        @if ($p->id == auth()->user()->works_under)
+
+                                        <div class="card">
+
+                                            <div class="card-header">
+                                                <h5>{{ $p->name }}</h5>
+                                            </div>
+                                            <img alt="image" src='/assets/img/avatar/avatar-4.png'
+                                                class="img-center p-3" data-toggle="tooltip" title="" width="256">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h5>Nama:</h5>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <h5>{{ $p->name }}</h5>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h5>Alamat:</h5>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <h5>{{ $p->address }}</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="float-right mt-sm-0 mt-3 p-4">
+                                            {{-- <a href="#" class="btn btn-danger mt-3 follow-btn" data-follow-action="alert('follow clicked');"
+                                        data-unfollow-action="alert('unfollow clicked');" data-nama = {{ $p->name }}>Hapus</a>
+                                            --}}
+                                            <form action="{{ url('/terimapanggilan') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $p->id }}>
+                                                <button type="submit" class="btn btn-primary"
+                                                    data-notelp={{ $p->phone_number  }}>Terima</button>
+                                            </form>
+
+                                        </div>
+
+                                        <div class="float-left mt-sm-0 mt-3">
+                                            <br>
+                                            <form action="{{ url('/tolakpanggilan') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $p->id }}>
+                                                <button type="submit" class="btn btn-danger"
+                                                    data-nama={{ $p->name }}>Tolak</button>
+                                            </form>
+                                        </div>
+                                        @endif
+
+                                        @endforeach
+
+
+
+
+                                        <script>
+                                            deleteButtons = document.querySelectorAll('.btn-danger');
+                                            acceptButtons = document.querySelectorAll('.btn-primary');
+
+                                            deleteButtons.forEach(btn => {
+                                                btn.addEventListener('click', () => {
+                                                    alert('Berhasil menolak panggilan mandor');
+                                                });
+                                            });
+
+                                            acceptButtons.forEach(btn => {
+                                                btn.addEventListener('click', () => {
+                                                    alert('Berhasil menerima kuli, silahkan kabari mandor anda melalui nomor telepon : ' +
+                                                        btn.dataset.notelp);
+
+                                                });
+                                            });
+
+                                        </script>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                @elseif (auth()->user()->called == 1 && auth()->user()->status_id == 2)
+
+                <div class="container">
+                    <h4>Anda sedang bekerja.</h4>
+                </div>
+
+                @elseif (auth()->user()->status_id == 3)
+
+                <div class="container">
+                    <h4>Mandor mengirim permintaan selesai, konfirmasi?</h4>
+                </div>
+
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="card">
@@ -71,28 +194,6 @@
 
                             </script>
 
-                            {{-- <script>
-                                function ready() {
-                                    alert("Berhasil mengajukan diri dan mengubah status anda.");
-                                    location.reload();
-                                }
-
-                                function cancel() {
-                                    alert("Berhasil membatalkan pengajuan diri.");
-                                    location.reload();
-                                }
-
-                                // const ajukan = document.getElementById("ajukandiri");
-                                let batalkan = document.getElementById("tombol");
-                                batalkan.addEventListener("click", function () {
-                                    if (batalkan.dataset.status == "1") {
-                                        ready;
-                                    } else {
-                                        cancel;
-                                    }
-                                })
-                            </script> --}}
-
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
@@ -119,6 +220,10 @@
                         </div>
                     </div>
                 </div>
+                @endif
+
+
+
             </div>
             {{-- </div> --}}
         </div>

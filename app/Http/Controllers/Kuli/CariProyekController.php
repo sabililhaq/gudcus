@@ -39,13 +39,24 @@ class CariProyekController extends Controller
         return Redirect('/kuli/cariproyek');
     }
 
+    public function legowo(){
+        $id = auth()->user()->id;
+        $user = User::find($id);
+        $user->applying = '0';
+        $user->proyek_id = null;
+        $user->works_under = null;
+        $user->status_id = '7';
+        $user->save();
+        return Redirect('/kuli/cariproyek');
+    }
+
     public function cancel(){
         $id = auth()->user()->id;
         $user = User::find($id);
         $user->applying = '0';
         $user->proyek_id = '0';
         $user->works_under = '0';
-        $user->status_id = '0';
+        $user->status_id = '7';
         $user->save();
         return Redirect('/kuli/cariproyek');
     }

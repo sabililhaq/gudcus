@@ -33,7 +33,7 @@
                                 </div>
                                 @endif
 
-                                @if (auth()->user()->applying == '1')
+                                @if (auth()->user()->applying == '1' && auth()->user()->status_id == 1)
                                 
                                 <div class="hero align-items-center bg-success text-white">
                                     <div class="hero-inner text-center">
@@ -66,7 +66,53 @@
                                         });
                                     });
                                 </script>
-                                @else
+
+                                @elseif(auth()->user()->applying == '0' && auth()->user()->status_id == '6')
+
+                                <div class="hero align-items-center bg-danger text-white">
+                                    <div class="hero-inner text-center">
+                                      <h2>Lamaran anda ditolak</h2>
+                                      @foreach ($proyeks as $p)
+                                          @if ($p->id == auth()->user()->proyek_id)
+                                            <p class="lead">Lamaran anda pada proyek {{ $p->name }} ditolak</p>
+                                            <p class="lead">Jangan patah semangat, ayo daftar lagi!</p>
+                                          @endif
+                                      @endforeach
+                                      <div class="mt-4">
+                                          <form action="{{ url('/legowo') }}" method="get">
+                                              @csrf
+                                            <button type="submit" class="btn btn-outline-white btn-danger btn-icon icon-left" data-nama={{ $p->name }}>Legowo</button>
+                                          </form>
+                                        {{-- <a href="#" class="btn btn-outline-white btn-danger btn-icon icon-left"><i class="fas fa-sign-in-alt"></i> Batalkan</a> --}}
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <script>
+                                    deleteButtons = document.querySelectorAll('.btn');
+                                    deleteButtons.forEach(btn => {
+                                        btn.addEventListener('click', () => {
+                                            // let konfirmasi = confirm(
+                                            //     'Apakah anda yakin mendaftar pada proyek ' + btn
+                                            //     .dataset.nama + ' ?');
+                                            const data = btn.dataset.nama;
+                                            alert('Berhasil membatalkan pendaftaran anda pada proyek ' + data);
+                                        });
+                                    });
+                                </script>
+
+                                @elseif (auth()->user()->status_id == 2)
+                    
+                                <div class="container">
+                                        <h4>Anda sedang bekerja.</h4>
+                                </div>
+                                @elseif (auth()->user()->status_id == 3)
+                    
+                                <div class="container">
+                                        <h4>Mandor mengirim permintaan selesai, konfirmasi?</h4>
+                                </div>
+
+                                @elseif(auth()->user()->applying == '0' && auth()->user()->status_id == 7)
                                 @foreach ($proyeks as $p)
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                                     <article class="article">

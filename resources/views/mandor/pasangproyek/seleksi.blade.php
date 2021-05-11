@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Detail Kuli') }}
+            {{ __('Seleksi Kuli') }}
         </h2>
     </x-slot>
 
@@ -72,8 +72,9 @@
                 <form action="{{ url('/terima') }}" method="post">
                     @csrf
                     <input type="hidden" id="kuli_id" name="kuli_id" value={{ $p->id }}>
-                    <button type="submit" class="btn btn-primary" data-nama={{ $p->name }}>Terima</button>
+                    <button type="submit" class="btn btn-primary" data-notelp={{ $p->phone_number }}>Terima</button>
                 </form>
+                <br><br>
                 <form action="{{ url('/tolak') }}" method="post">
                     @csrf
                     <input type="hidden" id="kuli_id" name="kuli_id" value={{ $p->id }}>
@@ -87,12 +88,19 @@
 
 
             <script>
-                deleteButtons = document.querySelectorAll('.btn');
+                deleteButtons = document.querySelectorAll('.btn-danger');
+                acceptButtons = document.querySelectorAll('.btn-primary');
+
                 deleteButtons.forEach(btn => {
                     btn.addEventListener('click', () => {
-                        let konfirmasi = confirm(
-                            'Apakah anda yakin memanggil ' + btn
-                            .dataset.nama + ' untuk bekerja pada anda?');
+                        alert('Berhasil menolak lamaran kuli');
+                    });
+                });
+
+                acceptButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        alert('Kuli ditambahkan ke daftar Kuli Anda, hubungi segera kuli tersebut pada nomor telepon : ' + btn.dataset.notelp);
+
                     });
                 });
 

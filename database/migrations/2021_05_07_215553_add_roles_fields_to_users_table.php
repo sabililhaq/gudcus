@@ -28,7 +28,7 @@ class AddRolesFieldsToUsersTable extends Migration
             $table->string('photo')->nullable();
             $table->boolean('applying')->default(false);
             $table->foreignId('proyek_id')->nullable();
-            $table->foreignId('status_id')->nullable();
+            $table->foreignId('status_id')->default(7);
 
 
         });

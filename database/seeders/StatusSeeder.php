@@ -21,6 +21,9 @@ class StatusSeeder extends Seeder
         Status::create(['id' => '3','name' => 'Menunggu Konfirmasi Pelepasan Kuli']);
         Status::create(['id' => '4','name' => 'Belum Menerima Panggilan Anda']);
         Status::create(['id' => '5','name' => 'Menolak Panggilan Anda']);
+        Status::create(['id' => '6','name' => 'Kuli ditolak Mandor']);
+        Status::create(['id' => '7','name' => 'Pengangguran']);
+
 
     }
 }

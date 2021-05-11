@@ -14,8 +14,8 @@ class AjukanDiriController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $user = User::all();
-        return view('kuli.ajukandiri.index', compact('user'));
+        $users = User::all();
+        return view('kuli.ajukandiri.index', ['users' => $users]);
     }
 
     public function ready()
@@ -38,6 +38,26 @@ class AjukanDiriController extends Controller
         return Redirect('/kuli/ajukandiri');
 
 
+    }
+
+    public function accept(){
+        $kuli_id = request('kuli_id');
+        $user = User::find($kuli_id);
+        $user->status_id = '2';
+        $user->save();
+
+        return Redirect('/kuli/ajukandiri');
+    }
+
+    public function decline(){
+        $kuli_id = request('kuli_id');
+        $user = User::find($kuli_id);
+        $user->called = '0';
+        $user->status_id = '5';
+        $user->kuli_availability = '0';
+        $user->save();
+
+        return Redirect('/kuli/ajukandiri');
     }
 
     /**

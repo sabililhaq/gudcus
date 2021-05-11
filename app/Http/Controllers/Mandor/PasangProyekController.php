@@ -15,6 +15,34 @@ class PasangProyekController extends Controller
         return view('mandor.pasangproyek.index', ['proyek' => $proyek]);
     }
 
+    public function terima(){
+        $kuli_id = request('kuli_id');
+
+        $user = User::find($kuli_id);
+        $user->called = '1';
+        $user->status_id = '2';
+        $user->applying = '0';
+        $user->proyek_id = '0';
+        $user->save();
+
+        return Redirect('/mandor/pasangproyek');
+    }
+
+    public function tolak(){
+        $kuli_id = request('kuli_id');
+
+        $id = auth()->user()->id;
+
+        $user = User::find($kuli_id);
+        $user->called = '1';
+        $user->status_id = '6';
+        $user->works_under = '0';
+        $user->applying = '0';
+        $user->save();
+
+        return Redirect('/mandor/pasangproyek');
+    }
+
     public function delete(){
         $id = request('proyek_id');
         DB::delete('delete from proyeks where id = '.$id);

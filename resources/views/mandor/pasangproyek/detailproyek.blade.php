@@ -16,6 +16,16 @@
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <tbody>
+                                
+                                
+                                @if (count($kulis) == 0)
+                                <tr>
+                                    <th>
+                                        <h4>Belum ada kuli yang mendaftar pada proyek ini.</h4>
+
+                                    </th>
+                                </tr>
+                                @else
                                 <tr>
                                     <th>Foto</th>
                                     <th>Nama</th>
@@ -23,8 +33,9 @@
                                     <th>Spesialisasi</th>
                                     <th>Action</th>
                                 </tr>
-
+                                @endif
                                 @foreach ($kulis as $k)
+                                
                                 <tr>
                                     <td>
                                         <img alt="image" src='/assets/img/avatar/avatar-4.png'
@@ -34,7 +45,7 @@
                                     <td>{{ $k->address }}</td>
                                     <td>{{ $k->kuli_specialties }}</td>
                                     <td>
-                                        <form action="{{ url('/mandor/pasangproyek/detailproyek/seleksi') }}" method="post">
+                                        <form action="{{ url('/mandor/pasangproyek/seleksi') }}" method="get">
                                             @csrf
                                             <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
                                             {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
@@ -107,57 +118,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-                                {{-- <div class="form-group row mb-4">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
-                                        Proyek:</label>
-                                    <div class="col-sm-12 col-md-7">
-                                        <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ $p->name }}</label>
-                            </div>
-                        </div>
-
-                        @foreach ($mandor as $man)
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
-                                Mandor:</label>
-                            <div class="col-sm-12 col-md-7">
-                                <label
-                                    class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ $man->name }}</label>
-                            </div>
-                        </div>
-                        @endforeach
-
-
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Lokasi
-                                Proyek:</label>
-                            <div class="col-sm-12 col-md-7">
-                                <label
-                                    class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ $p->address }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Detail
-                                Proyek:</label>
-                            <div class="col-sm-12 col-md-7">
-                                <label
-                                    class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ $p->detail }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Spesifikasi
-                                Kuli Dibutuhkan:</label>
-                            <div class="col-sm-12 col-md-7">
-                                {{-- <input type="text" id="spek" name="spek" required> --}}
-                                {{-- <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">{{ $p->specialties_needed }}</label>
-                            </div>
-                        </div> --}}
 
                     </div>
 
