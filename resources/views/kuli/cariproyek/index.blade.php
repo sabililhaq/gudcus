@@ -121,7 +121,7 @@
 
                                 
 
-                                @elseif(auth()->user()->applying == '0' && auth()->user()->status_id == 7)
+                                @elseif(auth()->user()->applying == '0' && (auth()->user()->status_id == 5 || auth()->user()->status_id == 7))
                                 @foreach ($proyeks as $p)
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                                     <article class="article">
