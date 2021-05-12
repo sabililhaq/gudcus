@@ -41,7 +41,8 @@ class AjukanDiriController extends Controller
     }
 
     public function accept(){
-        $kuli_id = request('kuli_id');
+        $kuli_id = auth()->user()->id;
+        
         $user = User::find($kuli_id);
         $user->status_id = '2';
         $user->save();
@@ -50,7 +51,8 @@ class AjukanDiriController extends Controller
     }
 
     public function decline(){
-        $kuli_id = request('kuli_id');
+        $kuli_id = auth()->user()->id;
+
         $user = User::find($kuli_id);
         $user->called = '0';
         $user->status_id = '5';

@@ -69,7 +69,6 @@
                                             --}}
                                             <form action="{{ url('/terimapanggilan') }}" method="post">
                                                 @csrf
-                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $p->id }}>
                                                 <button type="submit" class="btn btn-primary"
                                                     data-notelp={{ $p->phone_number  }}>Terima</button>
                                             </form>
@@ -80,7 +79,6 @@
                                             <br>
                                             <form action="{{ url('/tolakpanggilan') }}" method="post">
                                                 @csrf
-                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $p->id }}>
                                                 <button type="submit" class="btn btn-danger"
                                                     data-nama={{ $p->name }}>Tolak</button>
                                             </form>

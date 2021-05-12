@@ -64,7 +64,6 @@ class KuliAndaController extends Controller
 
         $user = User::find($kuli_id);
         $user->called = '0';
-        $user->kuli_availability = '0';
         $user->status_id = '7';
         $user->works_under = null;
         $user->save();

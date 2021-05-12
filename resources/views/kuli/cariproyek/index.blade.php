@@ -109,7 +109,7 @@
                                 @elseif (auth()->user()->status_id == 3)
                     
                                 <div class="container">
-                                        <h4>Mandor mengirim permintaan selesai, konfirmasi?</h4>
+                                        <h4>Mandor mengirim permintaan selesai, konfirmasi pada halaman Ajukan Diri</h4>
                                 </div>
 
                                 @elseif(auth()->user()->applying == '0' && auth()->user()->status_id == 7)
