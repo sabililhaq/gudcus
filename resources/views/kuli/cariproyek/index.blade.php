@@ -106,11 +106,20 @@
                                 <div class="container">
                                         <h4>Anda sedang bekerja.</h4>
                                 </div>
+
                                 @elseif (auth()->user()->status_id == 3)
                     
                                 <div class="container">
                                         <h4>Mandor mengirim permintaan selesai, konfirmasi pada halaman Ajukan Diri</h4>
                                 </div>
+
+                                @elseif (auth()->user()->status_id ==4)
+                    
+                                <div class="container">
+                                        <h4>Anda menerima panggilan, silahkan buka halaman ajukan diri dan konfirmasi.</h4>
+                                </div>
+
+                                
 
                                 @elseif(auth()->user()->applying == '0' && auth()->user()->status_id == 7)
                                 @foreach ($proyeks as $p)
