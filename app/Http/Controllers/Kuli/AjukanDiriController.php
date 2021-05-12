@@ -60,6 +60,19 @@ class AjukanDiriController extends Controller
         return Redirect('/kuli/ajukandiri');
     }
 
+    public function confirm(){
+        $kuli_id = auth()->user()->id;
+        $user = User::find($kuli_id);
+        $user->called = '0';
+        $user->status_id = '7';
+        $user->kuli_availability = '0';
+        $user->works_under = null;
+
+        $user->save();
+
+        return Redirect('/kuli/ajukandiri');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

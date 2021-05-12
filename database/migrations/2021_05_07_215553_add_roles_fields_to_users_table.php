@@ -24,7 +24,7 @@ class AddRolesFieldsToUsersTable extends Migration
             $table->integer('mandor_kulis')->nullable();
             $table->boolean('called')->default(false);
             $table->foreignId('works_under')->nullable();
-            $table->string('experience')->nullable();
+            $table->string('experience')->default('*Ini adalah pengalaman nguli sebagai portfolio kuli');
             $table->string('photo')->nullable();
             $table->boolean('applying')->default(false);
             $table->foreignId('proyek_id')->nullable();

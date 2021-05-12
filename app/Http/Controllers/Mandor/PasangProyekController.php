@@ -22,7 +22,6 @@ class PasangProyekController extends Controller
         $user->called = '1';
         $user->status_id = '2';
         $user->applying = '0';
-        $user->proyek_id = '0';
         $user->save();
 
         return Redirect('/mandor/pasangproyek');
@@ -64,7 +63,7 @@ class PasangProyekController extends Controller
 
     public function detail(){
         $proyek = Proyek::all()->where('id', '=', request('proyek_id'));
-        $kulis = User::all()->where('proyek_id', '=', request('proyek_id'));
+        $kulis = User::all()->where('proyek_id', '=', request('proyek_id'))->where('status_id', '=', '1');
 
         // dump($mandor);
         return view('mandor.pasangproyek.detailproyek', ['proyek' => $proyek, 'kulis' => $kulis]);

@@ -130,9 +130,50 @@
 
                 @elseif (auth()->user()->status_id == 3)
 
-                <div class="container">
-                    <h4>Mandor mengirim permintaan selesai, konfirmasi?</h4>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Konfirmasi Pelepasan Kerja
+                            </div>
+                            <div class="card-body">
+                                Mandor melakukan permintaan pelepasan kerja. (Konfirmasi jika kerja selesai dan pembayaran telah dilakukan)
+                            </div>
+                            <div class="float-left mt-sm-0 mt-3">
+                                <br>
+                                <form action="{{ url('/konfirmasi') }}" method="post">
+                                    @csrf
+                                    <button type="submit" id="tombol" class="btn btn-warning" data-status="1">
+                                        <i class="fas fa-check"></i> Konfirmasi</button>
+
+                                </form>
+                            </div>
+
+                            <script>
+                                function ready() {
+                                    alert('Berhasil mengajukan diri dan mengubah status Anda');
+                                }
+
+                                function cancel() {
+                                    alert('Berhasil membatalkan pengajuan diri dan mengubah status Anda');
+                                }
+                                const btn = document.querySelector('.btn');
+                                const data = btn.dataset.status;
+                                btn.addEventListener('click', () => {
+                                    if (data == "0") {
+                                        ready();
+                                    } else {
+                                        cancel();
+                                    }
+                                });
+
+                            </script>
+
+                        </div>
+                    </div>
                 </div>
+
+                @else
 
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -211,8 +252,8 @@
                                 @if (auth()->user()->kuli_availability == 1)
                                 <div class="card-body">
                                     <p class="card-text">Status Anda saat ini siap panggil (Available)</p>
-                                    <p class="card-text">Anda akan langsung dihubungi mandor jika ada panggilan melalui
-                                        nomor telepon anda.</p>
+                                    <br>
+                                    <p class="card-text">Silahkan cek halaman ini secara berkala untuk melihat panggilan mandor (Fitur notifikasi coming soon)</p>
 
                                 </div>
                                 @endif
@@ -234,3 +275,35 @@
 
     </div>
 </x-app-layout>
+
+{{-- <div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+            </div>
+
+            <script>
+                function ready() {
+                    alert('Berhasil mengajukan diri dan mengubah status Anda');
+                }
+
+                function cancel() {
+                    alert('Berhasil membatalkan pengajuan diri dan mengubah status Anda');
+                }
+                const btn = document.querySelector('.btn');
+                const data = btn.dataset.status;
+                btn.addEventListener('click', () => {
+                    if (data == "0") {
+                        ready();
+                    } else {
+                        cancel();
+                    }
+                });
+
+            </script>
+
+        </div>
+    </div>
+</div> --}}

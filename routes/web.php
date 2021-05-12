@@ -54,6 +54,9 @@ Route::post('/terimapanggilan', '\App\Http\Controllers\Kuli\AjukanDiriController
 
 Route::post('/tolakpanggilan', '\App\Http\Controllers\Kuli\AjukanDiriController@decline');
 
+Route::post('/konfirmasi', '\App\Http\Controllers\Kuli\AjukanDiriController@confirm');
+
+
 Route::post('/proyekbaru', '\App\Http\Controllers\Mandor\PasangProyekController@new');
 
 Route::post('/hapusproyek', '\App\Http\Controllers\Mandor\PasangProyekController@delete');
@@ -65,6 +68,19 @@ Route::post('/tolak', '\App\Http\Controllers\Mandor\PasangProyekController@tolak
 Route::post('/mandor/carikuli/detailkuli', '\App\Http\Controllers\Mandor\CariKuliController@detail');
 
 Route::post('/panggil', '\App\Http\Controllers\Mandor\CariKuliController@call');
+
+
+Route::post('/selesai', '\App\Http\Controllers\Mandor\KuliAndaController@done');
+
+Route::post('/batalselesai', '\App\Http\Controllers\Mandor\KuliAndaController@cancel');
+
+Route::post('/batalpanggil', '\App\Http\Controllers\Mandor\KuliAndaController@cancelcall');
+
+Route::post('/hapus', '\App\Http\Controllers\Mandor\KuliAndaController@delete');
+
+
+
+
 
 
 

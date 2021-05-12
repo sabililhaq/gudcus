@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         User::create(['name' => 'Admin', 'password' => bcrypt('admin'), 'email' => 'admin@admin.com', 'role_id' => '1', 'address' => 'Rumahnya Admin', 'phone_number' => '085750479798']);
         
         //Kuli
-        User::create(['name' => 'Kuli', 'password' => bcrypt('kuli'), 'email' => 'kuli@kuli.com', 'role_id' => '2', 'address' => 'Rumahnya Kuli', 'phone_number' => '080265228878', 'kuli_availability' => '0', 'kuli_specialties' => 'Besi', 'experience' => 'Pernah mengerjakan proyek besar sebagai tukang pasang besi dan baja ringan pada proyek besar']);
+        User::create(['name' => 'Kuli Kurnia Akbar', 'password' => bcrypt('kuli'), 'email' => 'kuli@kuli.com', 'role_id' => '2', 'address' => 'Rumahnya Kuli', 'phone_number' => '080265228878', 'kuli_availability' => '0', 'kuli_specialties' => 'Besi', 'experience' => 'Pernah mengerjakan proyek besar sebagai tukang pasang besi dan baja ringan pada proyek besar']);
         User::create(['name' => 'Ahmad Kuliawan', 'password' => bcrypt('kuli1'), 'email' => 'kuli1@kuli.com', 'role_id' => '2', 'address' => 'Jalan Masih Ada no 420, Jember Utara', 'phone_number' => '080272494794', 'kuli_availability' => '1', 'kuli_specialties' => 'Cor', 'experience' => 'Berpengalaman ngecor dan menjadi tumbal proyek']);
         User::create(['name' => 'Fulan', 'password' => bcrypt('kuli2'), 'email' => 'kuli2@kuli.com', 'role_id' => '2', 'address' => 'Jalan Rambutan no 123, Queensland', 'phone_number' => '084154858211', 'kuli_availability' => '1', 'kuli_specialties' => 'Besi, Mekanik', 'experience' => 'Saya jago di alat dan mesin']);
         User::create(['name' => 'Vega Hakim', 'password' => bcrypt('kuli3'), 'email' => 'kuli3@kuli.com', 'role_id' => '2', 'address' => 'Perumahan Elitis no 11, Arkansas', 'phone_number' => '089279639128', 'kuli_availability' => '1', 'kuli_specialties' => 'Kayu, Besi', 'experience' => 'Berpengalaman mengerjakan hal berbau kayu']);
@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
         User::create(['name' => 'Wawan Mandala', 'password' => bcrypt('kuli19'), 'email' => 'kuli19@kuli.com', 'role_id' => '2', 'address' => 'Gg. R.E. Martadinata No. 553, Administrasi Jakarta Utara 49410, NTB', 'phone_number' => '081591537440', 'kuli_availability' => '1', 'kuli_specialties' => 'Besi', 'experience' => '*Ini adalah pengalaman nguli sebagai portfolio kuli']);
         
         //Mandor
-        User::create(['name' => 'Mandor', 'password' => bcrypt('mandor'), 'email' => 'mandor@mandor.com', 'role_id' => '3', 'address' => 'Rumahnya Mandor', 'phone_number' => '089603098514']);
+        User::create(['name' => 'Dwi Mandor Putra', 'password' => bcrypt('mandor'), 'email' => 'mandor@mandor.com', 'role_id' => '3', 'address' => 'Rumahnya Mandor', 'phone_number' => '089603098514']);
         User::create(['name' => 'David Daud', 'password' => bcrypt('mandor1'), 'email' => 'mandor1@mandor.com', 'role_id' => '3', 'address' => 'Perumahan Marjinal no 720, Jember Utara', 'phone_number' => '083091160286']);
         User::create(['name' => 'Saadat Cakrabirawa Prayoga S.Pd', 'password' => bcrypt('mandor2'), 'email' => 'mandor2@mandor.com', 'role_id' => '3', 'address' => 'Jr. Basoka Raya No. 110, Bekasi 79141, KepR', 'phone_number' => '085484386343']);
         User::create(['name' => 'Murti Asmuni Adriansyah M.Pd', 'password' => bcrypt('mandor3'), 'email' => 'mandor3@mandor.com', 'role_id' => '3', 'address' => 'Jr. Suryo No. 285, Sabang 74441, PapBar', 'phone_number' => '084210923132']);

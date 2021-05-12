@@ -74,8 +74,12 @@
                                         @if ($s->id == $k->status_id)
                                         <th>{{ $s->name }}</th>
                                         <th>
-                                            <a href="{{ url('/mandor/pasangproyek') }}"
-                                                class="btn btn-success">Selesai</a>
+                                            <form action="{{ url('/selesai') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
+                                                {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
+                                                <button type="submit" class="btn btn-success">Selesai</button>
+                                            </form>
                                         </th>
                                         @endif
                                         @endforeach
@@ -85,8 +89,12 @@
                                         @if ($s->id == $k->status_id)
                                         <th>{{ $s->name }}</th>
                                         <th>
-                                            <a href="{{ url('/mandor/pasangproyek') }}"
-                                                class="btn btn-warning">Batal</a>
+                                            <form action="{{ url('/batalselesai') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
+                                                {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
+                                                <button type="submit" class="btn btn-warning">Batal</button>
+                                            </form>
                                         </th>
                                         @endif
                                         @endforeach
@@ -96,8 +104,12 @@
                                         @if ($s->id == $k->status_id)
                                         <th>{{ $s->name }}</th>
                                         <th>
-                                            <a href="{{ url('/mandor/pasangproyek') }}"
-                                                class="btn btn-danger">Batal</a>
+                                            <form action="{{ url('/batalpanggil') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
+                                                {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
+                                                <button type="submit" class="btn btn-warning">Batal</button>
+                                            </form>
                                         </th>
                                         @endif
                                         @endforeach
@@ -107,8 +119,12 @@
                                         @if ($s->id == $k->status_id)
                                         <th>{{ $s->name }}</th>
                                         <th>
-                                            <a href="{{ url('/mandor/pasangproyek') }}"
-                                                class="btn btn-info">Hapus</a>
+                                            <form action="{{ url('/hapus') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
+                                                {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
+                                                <button type="submit" class="btn btn-danger">Hapus</button>
+                                            </form>
                                         </th>
                                         @endif
                                         @endforeach

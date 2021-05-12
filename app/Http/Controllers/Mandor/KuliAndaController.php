@@ -25,6 +25,53 @@ class KuliAndaController extends Controller
         return view('mandor.kulianda.index', ['kulis' => $kuli_available, 'statuses' => $statuses]);
     }
 
+    public function done(){
+        $kuli_id = request('kuli_id');
+
+        $user = User::find($kuli_id);
+        $user->status_id = '3';
+        $user->save();
+
+        return Redirect('/mandor/kulianda');
+
+    }
+
+    public function cancel(){
+        $kuli_id = request('kuli_id');
+
+        $user = User::find($kuli_id);
+        $user->status_id = '2';
+        $user->save();
+
+        return Redirect('/mandor/kulianda');
+    }
+
+    public function cancelcall(){
+        $kuli_id = request('kuli_id');
+
+        $user = User::find($kuli_id);
+        $user->called = '0';
+        $user->kuli_availability = '1';
+        $user->status_id = '7';
+        $user->works_under = null;
+        $user->save();
+
+        return Redirect('/mandor/kulianda');
+    }
+
+    public function delete(){
+        $kuli_id = request('kuli_id');
+
+        $user = User::find($kuli_id);
+        $user->called = '0';
+        $user->kuli_availability = '0';
+        $user->status_id = '7';
+        $user->works_under = null;
+        $user->save();
+
+        return Redirect('/mandor/kulianda');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

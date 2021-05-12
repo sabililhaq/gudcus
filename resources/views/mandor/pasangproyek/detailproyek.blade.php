@@ -49,7 +49,7 @@
                                             @csrf
                                             <input type="hidden" id="kuli_id" name="kuli_id" value={{ $k->id }}>
                                             {{-- <a href="javascript:$('form').submit()">{{ $p->name }}</a> --}}
-                                            <button type="submit" class="btn-seleksi btn-primary">Seleksi</a>
+                                            <button type="submit" class="btn-seleksi btn-primary">Seleksi</button>
                                         </form>
                                     </td>
                                 </tr>
