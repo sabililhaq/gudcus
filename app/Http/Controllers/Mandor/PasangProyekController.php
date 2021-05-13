@@ -49,6 +49,7 @@ class PasangProyekController extends Controller
         foreach($users as $user){
             $user->applying = '0';
             $user->proyek_id = '0';
+            $user->status_id = '8';
             $user->save();
         }
         return Redirect('/mandor/pasangproyek');

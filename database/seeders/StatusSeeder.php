@@ -23,6 +23,8 @@ class StatusSeeder extends Seeder
         Status::create(['id' => '5','name' => 'Menolak Panggilan Anda']);
         Status::create(['id' => '6','name' => 'Kuli ditolak Mandor']);
         Status::create(['id' => '7','name' => 'Pengangguran']);
+        Status::create(['id' => '8','name' => 'Mandor menghapus proyek']);
+
 
 
     }
