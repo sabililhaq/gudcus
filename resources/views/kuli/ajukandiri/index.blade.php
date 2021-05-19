@@ -102,8 +102,9 @@
 
                                             acceptButtons.forEach(btn => {
                                                 btn.addEventListener('click', () => {
-                                                    alert('Berhasil menerima kuli, silahkan kabari mandor anda melalui nomor telepon : ' +
-                                                        btn.dataset.notelp);
+                                                    alert(
+                                                        'Anda menerima panggilan kuli, anda secara resmi telah bekerja, silakan menunggu pesan dari mandor Anda'
+                                                    );
 
                                                 });
                                             });
@@ -122,150 +123,156 @@
                 </div>
                 @elseif (auth()->user()->called == 1 && auth()->user()->status_id == 2)
 
-                <div class="container">
-                    <h4>Anda sedang bekerja.</h4>
+                <div class="py-12">
+                    <div class="container p-1 rounded-3">
+                        <div class="card author-box card-primary">
+                            <div class="card-body">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Anda sedang bekerja</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h5>Selamat bekerja kuliawan!</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 @elseif (auth()->user()->status_id == 3)
 
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                Konfirmasi Pelepasan Kerja
-                            </div>
+                    <div class="container p-1 rounded-3">
+                        <div class="card author-box card-primary">
                             <div class="card-body">
-                                Mandor melakukan permintaan pelepasan kerja. (Konfirmasi jika kerja selesai dan pembayaran telah dilakukan)
+                                    <div class="card-header">
+                                        <h2>Konfirmasi pelepasan kerja</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="col-8">
+                                            <h5>Mandor melakukan permintaan pelepasan kerja. (Konfirmasi jika kerja
+                                                selesai dan
+                                                pembayaran telah dilakukan)</h5>
+                                        </div>
+
+                                        <div class="float-left mt-sm-0 mt-3">
+                                            <br>
+                                            <form action="{{ url('/konfirmasi') }}" method="post">
+                                                @csrf
+                                                <button type="submit" id="tombol" class="btn btn-warning"
+                                                    data-status="1">
+                                                    <i class="fas fa-check"></i> Konfirmasi</button>
+
+                                            </form>
+                                        </div>
+                                    </div>
                             </div>
-                            <div class="float-left mt-sm-0 mt-3">
-                                <br>
-                                <form action="{{ url('/konfirmasi') }}" method="post">
-                                    @csrf
-                                    <button type="submit" id="tombol" class="btn btn-warning" data-status="1">
-                                        <i class="fas fa-check"></i> Konfirmasi</button>
-
-                                </form>
-                            </div>
-
-                            <script>
-                                function ready() {
-                                    alert('Berhasil mengajukan diri dan mengubah status Anda');
-                                }
-
-                                function cancel() {
-                                    alert('Berhasil membatalkan pengajuan diri dan mengubah status Anda');
-                                }
-                                const btn = document.querySelector('.btn');
-                                const data = btn.dataset.status;
-                                btn.addEventListener('click', () => {
-                                    if (data == "0") {
-                                        ready();
-                                    } else {
-                                        cancel();
-                                    }
-                                });
-
-                            </script>
-
                         </div>
                     </div>
+
+
+    @else
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Pengajuan Diri</h4>
+                </div>
+                <div class="card-body">
+                    Dengan mengajukan diri, status anda menjadi available, yang berarti siap dipanggil kerja
+                    kapanpun.
+                    <br>
+                    Anda bisa membatalkan kapanpun.
                 </div>
 
-                @else
 
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Pengajuan Diri</h4>
-                            </div>
-                            <div class="card-body">
-                                Dengan mengajukan diri, status anda menjadi available, yang berarti siap dipanggil kerja
-                                kapanpun.
-                                <br>
-                                Anda bisa membatalkan kapanpun.
-                            </div>
-
-
-                            @if (auth()->user()->kuli_availability == 0)
-                            <div class="card-footer text-right">
-                                <form action="{{ url('/ready') }}" method="post">
-                                    @csrf
-                                    <button type="submit" id="tombol" class="btn btn-primary" data-status="0">
-                                        <i class="fas fa-address-book"></i> Ajukan
-                                        Diri</button>
-                                </form>
-                            </div>
-                            @endif
-
-                            @if (auth()->user()->kuli_availability == 1)
-                            <div class="card-footer text-right">
-                                {{-- <form method="post">
-
-                                </form> --}}
-                                <form action="{{ url('/cancel') }}" method="post">
-                                    @csrf
-                                    <button type="submit" id="tombol" class="btn btn-danger" data-status="1">
-                                        <i class="fas fa-times"></i> Batal
-                                        Ajukan Diri</button>
-
-                                </form>
-                            </div>
-                            @endif
-
-                            <script>
-                                function ready() {
-                                    alert('Berhasil mengajukan diri dan mengubah status Anda');
-                                }
-
-                                function cancel() {
-                                    alert('Berhasil membatalkan pengajuan diri dan mengubah status Anda');
-                                }
-                                const btn = document.querySelector('.btn');
-                                const data = btn.dataset.status;
-                                btn.addEventListener('click', () => {
-                                    if (data == "0") {
-                                        ready();
-                                    } else {
-                                        cancel();
-                                    }
-                                });
-
-                            </script>
-
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Keterangan</h4>
-                            </div>
-                            <div class="card-body">
-                                @if (auth()->user()->kuli_availability == 0)
-                                <div class="card-body">
-                                    <p class="card-text">Status Anda saat ini tidak siap panggil (Unavailable)</p>
-                                </div>
-                                @endif
-
-                                @if (auth()->user()->kuli_availability == 1)
-                                <div class="card-body">
-                                    <p class="card-text">Status Anda saat ini siap panggil (Available)</p>
-                                    <br>
-                                    <p class="card-text">Silahkan cek halaman ini secara berkala untuk melihat panggilan mandor (Fitur notifikasi coming soon)</p>
-
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+                @if (auth()->user()->kuli_availability == 0)
+                <div class="card-footer text-right">
+                    <form action="{{ url('/ready') }}" method="post">
+                        @csrf
+                        <button type="submit" id="tombol" class="btn btn-primary" data-status="0">
+                            <i class="fas fa-address-book"></i> Ajukan
+                            Diri</button>
+                    </form>
                 </div>
                 @endif
 
+                @if (auth()->user()->kuli_availability == 1)
+                <div class="card-footer text-right">
+                    {{-- <form method="post">
 
+                                </form> --}}
+                    <form action="{{ url('/cancel') }}" method="post">
+                        @csrf
+                        <button type="submit" id="tombol" class="btn btn-danger" data-status="1">
+                            <i class="fas fa-times"></i> Batal
+                            Ajukan Diri</button>
+
+                    </form>
+                </div>
+                @endif
+
+                <script>
+                    function ready() {
+                        alert('Berhasil mengajukan diri dan mengubah status Anda');
+                    }
+
+                    function cancel() {
+                        alert('Berhasil membatalkan pengajuan diri dan mengubah status Anda');
+                    }
+                    const btn = document.querySelector('.btn');
+                    const data = btn.dataset.status;
+                    btn.addEventListener('click', () => {
+                        if (data == "0") {
+                            ready();
+                        } else {
+                            cancel();
+                        }
+                    });
+
+                </script>
 
             </div>
-            {{-- </div> --}}
         </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Keterangan</h4>
+                </div>
+                <div class="card-body">
+                    @if (auth()->user()->kuli_availability == 0)
+                    <div class="card-body">
+                        <p class="card-text">Status Anda saat ini tidak siap panggil (Unavailable)</p>
+                    </div>
+                    @endif
+
+                    @if (auth()->user()->kuli_availability == 1)
+                    <div class="card-body">
+                        <p class="card-text">Status Anda saat ini siap panggil (Available)</p>
+                        <br>
+                        <p class="card-text">Silahkan cek halaman ini secara berkala untuk melihat panggilan
+                            mandor (Fitur notifikasi coming soon)</p>
+
+                    </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+
+
+
+    </div>
+    {{-- </div> --}}
+    </div>
 
 
 

@@ -94,21 +94,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <script>
-                                deleteButtons = document.querySelectorAll('.btn');
-                                deleteButtons.forEach(btn => {
-                                    btn.addEventListener('click', () => {
-                                        // let konfirmasi = confirm(
-                                        //     'Apakah anda yakin mendaftar pada proyek ' + btn
-                                        //     .dataset.nama + ' ?');
-                                        const data = btn.dataset.nama;
-                                        alert('Berhasil membatalkan pendaftaran anda pada proyek ' +
-                                            data);
-                                    });
-                                });
-
-                            </script>
                             @elseif(auth()->user()->applying == '0' && auth()->user()->status_id == '8')
 
                             <div class="hero align-items-center bg-danger text-white">
@@ -144,14 +129,47 @@
 
                             @elseif (auth()->user()->status_id == 2)
 
-                            <div class="container">
-                                <h4>Anda sedang bekerja.</h4>
+                            <div class="py-12">
+                                <div class="container p-1 rounded-3">
+                                    <div class="card author-box card-primary">
+                                        <div class="card-body">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Anda sedang bekerja</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-8">
+                                                                <h5>Selamat bekerja kuliawan!</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             @elseif (auth()->user()->status_id == 3)
 
-                            <div class="container">
-                                <h4>Mandor mengirim permintaan selesai, konfirmasi pada halaman Ajukan Diri</h4>
+                            <div class="container p-1 rounded-3">
+                                <div class="card author-box card-primary">
+                                    <div class="card-body">
+                                        <div class="card-header">
+                                            <h5>Silakan ke halaman ajukan diri</h5>
+
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-8">
+                                                <h5>Mandor mengirim permintaan selesai bekerja, konfirmasi pada halaman
+                                                    Ajukan Diri</h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             @elseif (auth()->user()->status_id ==4)
