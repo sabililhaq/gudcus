@@ -40,16 +40,17 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('/dashboard') }}">Daftar</a>
                     </li> --}}
                     @if (Route::has('login'))
-                        @auth
-                        <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link js-scroll-trigger">Dashboard</a>
+                    @auth
+                    <li class="nav-item"><a href="{{ url('/dashboard') }}"
+                            class="nav-link js-scroll-trigger">Dashboard</a>
                         @else
-                        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link js-scroll-trigger">Masuk</a>
+                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link js-scroll-trigger">Masuk</a>
 
                         @if (Route::has('register'))
-                        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link js-scroll-trigger">Daftar</a>
+                    <li class="nav-item"><a href="{{ route('register') }}" class="nav-link js-scroll-trigger">Daftar</a>
                         @endif
                         @endauth
-                    @endif
+                        @endif
                 </ul>
             </div>
         </div>
@@ -63,7 +64,8 @@
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">Sebuah Media yang menjembatani antara mandor dengan kuli bangunan dalam pengerjaan proyek bagunan
+                    <p class="text-white-75 font-weight-light mb-5">Sebuah Media yang menjembatani antara mandor dengan
+                        kuli bangunan dalam pengerjaan proyek bagunan
                     </p>
                     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Tentang Kami</a>
                 </div>
@@ -77,7 +79,9 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-black mt-0">Tentang Kami</h2>
                     <hr class="divider light my-4" />
-                    <p class="text-black-50 mb-4">Nguli.id adalah sebuah marketplace jasa seorang kuli bangunan yang akan menghubungkan antara kuli bangunan dengan seorang mandor bangunan pada sebuah proyek yang sama.</p>
+                    <p class="text-black-50 mb-4">Nguli.id adalah sebuah marketplace jasa seorang kuli bangunan yang
+                        akan menghubungkan antara kuli bangunan dengan seorang mandor bangunan pada sebuah proyek yang
+                        sama.</p>
                     <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
                 </div>
             </div>
@@ -93,31 +97,41 @@
                     <div class="mt-5">
                         <i class="fas fa-4x fa-user text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Pengajuan Diri</h3>
-                        <p class="text-muted mb-0">Kuli dapat mengajukan dirinya menjadi dalam status siap dipanggil oleh mandor kapanpun.</p>
+                        <p class="text-muted mb-0">Kuli dapat mengajukan dirinya menjadi dalam status siap dipanggil
+                            oleh mandor kapanpun.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-building text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Pasang Proyek</h3>
-                        <p class="text-muted mb-0">Mandor dapat memasang proyek dengan harapan kuli akan mendaftarkan diri.</p>
+                        <p class="text-muted mb-0">Mandor dapat memasang proyek dengan harapan kuli akan mendaftarkan
+                            diri.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-search text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Cari Kuli</h3>
-                        <p class="text-muted mb-0">Mandor dapat memilih kuli yang telah mengajukan diri kepada proyeknya.</p>
+                        <p class="text-muted mb-0">Mandor dapat memilih kuli yang telah mengajukan diri kepada
+                            proyeknya.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-newspaper text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Artikel</h3>
-                        <p class="text-muted mb-0">Kuli dan Mandor dapat berbagi informasi tentang kehidupan dan berita terkini perproyekan bangunan.</p>
+                        <p class="text-muted mb-0">Kuli dan Mandor dapat berbagi informasi tentang kehidupan dan berita
+                            terkini perproyekan bangunan.</p>
                     </div>
                 </div>
+
+                {{-- <h2 class="text-center mt-0"><a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Tentang Kami</a></h2> --}}
             </div>
+
+        </div>
+
+
         </div>
     </section>
     <!-- Portfolio-->
@@ -195,8 +209,10 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="mt-0">Mari Ketahui Kami Lebih Lanjut</h2>
                     <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungai kami dinomor berikut
-                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama Majukan Kuli Indonesia</p>
+                    <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungai
+                        kami dinomor berikut
+                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama
+                        Majukan Kuli Indonesia</p>
                 </div>
             </div>
             <div class="row">
@@ -218,7 +234,7 @@
             <div class="small text-center text-muted">Copyright Â© 2021 - Kelompok 7 PEMWEB</div>
         </div>
     </footer> --}}
-    <x-footer/>
+    <x-footer />
     <!-- Bootstrap core JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

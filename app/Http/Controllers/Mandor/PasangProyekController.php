@@ -50,6 +50,7 @@ class PasangProyekController extends Controller
             $user->applying = '0';
             $user->proyek_id = '0';
             $user->status_id = '8';
+            $user->works_under = null;
             $user->save();
         }
         return Redirect('/mandor/pasangproyek');
