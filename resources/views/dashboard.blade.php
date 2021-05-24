@@ -52,33 +52,35 @@
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/pengajuan_diri.png" alt="First slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Heading</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h5>Mekanisme Pengajuan Diri</h5>
+                                <p>Kuli mengajukan diri pada halaman ajukan diri, mandor akan memilih kuli yang sesuai.</p>
                             </div>
                         </div>
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="assets/img/pencarian_proyek.png" alt="Second slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Heading</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h5>Mekanisme Pencarian Proyek</h5>
+                                <p>Kuli mencari proyek pada halaman cari proyek, setelah melamar kuli harus menunggu persetujuan
+                                    dari mandor yang berwenang.
+                                </p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/pencarian_kuli.png" alt="Third slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Heading</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h5>Mekanisme Pencarian Kuli</h5>
+                                <p>Mandor akan mencari kuli yang diinginkan pada halaman cari kuli, kuli akan mengkonfirmasi pemanggilan
+                                    mandor tersebut.
+                                </p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/pemasangan_proyek.png" alt="Forth slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Heading</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h5>Mekanisme Pemasangan Proyek</h5>
+                                <p>Mandor akan memasang proyek pada halaman pasang proyek, kuli akan melamar pada proyek tersebut,
+                                    lalu mandor akan menyeleksi kuli yang mendaftar.
+                                </p>
                             </div>
                         </div>
 

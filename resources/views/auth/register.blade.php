@@ -10,6 +10,14 @@
         <form method="POST" action="{{ route('register') }}" x-data="{role_id: 2}">
             @csrf
 
+            <div class="mt-4">
+                <x-jet-label for="role_id" value="{{ __('Daftar sebagai:') }}" />
+                <select name="role_id" x-model="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                    <option value="2">Kuli</option>
+                    <option value="3">Mandor</option>
+                </select>
+            </div>
+
             <div>
                 <x-jet-label for="name" value="{{ __('Nama') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
@@ -45,13 +53,7 @@
                 <x-jet-input id="phone_number" class="block mt-1 w-full" type="text" name="phone_number" :value="old('phone_number')" required />
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="role_id" value="{{ __('Daftar sebagai:') }}" />
-                <select name="role_id" x-model="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                    <option value="2">Kuli</option>
-                    <option value="3">Mandor</option>
-                </select>
-            </div>
+            
 
             <div class="mt-4" x-show="role_id == 2">
                 <x-jet-label for="kuli_specialties" value="{{ __('Spesialisasi') }}" />
