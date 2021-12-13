@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('Nguli.id', 'Nguli.id') }}</title>
+    <title>{{ config('gudang-custom.id', 'gudang-custom.id') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -48,13 +48,12 @@
         @endif
 
         <!-- Page Content -->
-        <div class="hero text-black hero-bg-image hero-bg-parallax"
-            style="background-image: url('/assets/img/gambar-kuli1.jpg');">
-            <div class="hero-inner">
+        <div class="hero text-black hero-bg-image hero-bg-parallax" style="background-image: url('/assets/img/gambar-kuli1.jpg');">
+            {{-- <div class="hero-inner"> --}}
                 <main>
                     {{ $slot }}
                 </main>
-            </div>
+            {{-- </div> --}}
         </div>
 
         {{-- <main>

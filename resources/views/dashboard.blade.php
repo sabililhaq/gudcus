@@ -13,12 +13,11 @@
             <div class="container">
 
                 <h2>Halo, {{ auth()->user()->name }} !</h2>
-                <p class="lead">Selamat datang di nguli.id, <br>Bersama kuli membangun negeri, Bersama mandor anti
-                    kendor</p>
+                <p class="lead">Selamat datang di GUDANG CUSTOM!, <br>Tempat belanja, design custom, dan berkarya</p>
                 @if (auth()->user()->role_id == '2')
-                <p>Jadilah kuli yang profesional</p>
+                <p>Customer dashboard</p>
                 @else
-                <p>Jadilah mandor yang bertanggung jawab</p>
+                <p>Artist & Seller dashboard</p>
                 @endif
                 <div class="mt-4">
                     <a href="{{ route('profile.show') }}" class="btn btn-outline-white btn-lg btn-icon icon-left"><i
@@ -33,13 +32,8 @@
         </div>
     </div>
 
-    <div class="container p-5">
-
-
+    {{-- <div class="container p-5">
         <div class="card p-5 bg-info">
-            {{-- <div class="card-header">
-                  <h4>Mekanisme Layanan Nguli.id</h4>
-                </div> --}}
             <div class="card-body">
                 <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -98,7 +92,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- </div> --}}
     {{-- </div> --}}
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>nguli.id</title>
+    <title>gudang-custom.id</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -26,7 +26,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Nguli.id</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">GUDANG CUSTOM</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -60,12 +60,11 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-white font-weight-bold">Marketplace Jasa Kuli Bangunan</h1>
+                    <h1 class="text-uppercase text-white font-weight-bold">GUDANG CUSTOM</h1>
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">Sebuah Media yang menjembatani antara mandor dengan
-                        kuli bangunan dalam pengerjaan proyek bagunan
+                    <p class="text-white-75 font-weight-light mb-5">Media penjembatan antara pekerja kreatif dengan klien untuk custom desain
                     </p>
                     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Tentang Kami</a>
                 </div>
@@ -79,9 +78,7 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-black mt-0">Tentang Kami</h2>
                     <hr class="divider light my-4" />
-                    <p class="text-black-50 mb-4">Nguli.id adalah sebuah marketplace jasa seorang kuli bangunan yang
-                        akan menghubungkan antara kuli bangunan dengan seorang mandor bangunan pada sebuah proyek yang
-                        sama.</p>
+                    <p class="text-black-50 mb-4">Gudang Custom merupakan sebuah platform marketplace sebagai media penjembatan antara pekerja kreatif dengan klien yang ingin membuat barang (custom design) sesuai dengan keinginan. mulailah custom bersama gudang custom.id, platform ini untuk memajukan para pedagang kecil dan menghubungkan seluruh bidang kreatif yang ada di indonesia. kami juga ingin bisa memudahkan para pencari barang custom agar dapat mudah untuk menemukan suatu design yang mereka inginkan</p>
                     <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
                 </div>
             </div>
@@ -96,25 +93,22 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-user text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Pengajuan Diri</h3>
-                        <p class="text-muted mb-0">Kuli dapat mengajukan dirinya menjadi dalam status siap dipanggil
-                            oleh mandor kapanpun.</p>
+                        <h3 class="h4 mb-2">Jual Beli</h3>
+                        <p class="text-muted mb-0">Penjual dapat memasangkan produknya dan dapat di beli oleh pembeli.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-building text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Pasang Proyek</h3>
-                        <p class="text-muted mb-0">Mandor dapat memasang proyek dengan harapan kuli akan mendaftarkan
-                            diri.</p>
+                        <h3 class="h4 mb-2">Custom Design</h3>
+                        <p class="text-muted mb-0">Klien dapat memilih sendiri desain yang diinginkan dan langsung dibuatkan oleh seniman terkait.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-search text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Cari Kuli</h3>
-                        <p class="text-muted mb-0">Mandor dapat memilih kuli yang telah mengajukan diri kepada
-                            proyeknya.</p>
+                        <h3 class="h4 mb-2">Chatting</h3>
+                        <p class="text-muted mb-0">Penjual, pembeli, seniman dapat saling berhubungan langsung melalui fitur chat.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -209,10 +203,9 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="mt-0">Mari Ketahui Kami Lebih Lanjut</h2>
                     <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungai
+                    <p class="text-muted mb-5">Jika perlu bantuan lebih lanjut mengenai website kami, silahkan hubungi
                         kami dinomor berikut
-                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin. Bersama
-                        Majukan Kuli Indonesia</p>
+                        atau kirimkan kepada email yang tertera dibawah. Kami akan merespon secepat mungkin.</p>
                 </div>
             </div>
             <div class="row">
@@ -223,7 +216,7 @@
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                     <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                    <a class="d-block" href="mailto:contact@yourwebsite.com">dotasabili@gmail.com</a>
+                    <a class="d-block" href="mailto:contact@yourwebsite.com">sabililhaq.furqony@gmail.com</a>
                 </div>
             </div>
         </div>

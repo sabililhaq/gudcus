@@ -32,7 +32,7 @@
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
-          Bersama kuli membangun negeri.
+          Proyek Akhir Rekayasa Perangkat Lunak
         </p>
       </section>
       <!-- Section: Text -->

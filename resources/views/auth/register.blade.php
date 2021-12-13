@@ -13,8 +13,8 @@
             <div class="mt-4">
                 <x-jet-label for="role_id" value="{{ __('Daftar sebagai:') }}" />
                 <select name="role_id" x-model="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                    <option value="2">Kuli</option>
-                    <option value="3">Mandor</option>
+                    <option value="2">Customer</option>
+                    <option value="3">Artist / Seller</option>
                 </select>
             </div>
 
@@ -54,11 +54,11 @@
             </div>
 
             
-
+{{-- 
             <div class="mt-4" x-show="role_id == 2">
                 <x-jet-label for="kuli_specialties" value="{{ __('Spesialisasi') }}" />
                 <x-jet-input id="kuli_specialties" class="block mt-1 w-full" type="text" :value="old('kuli_specialties')" name="kuli_specialties" requried/>
-            </div>
+            </div> --}}
 
             
 

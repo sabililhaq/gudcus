@@ -92,6 +92,24 @@ Route::group(['middleware' => 'auth'], function () {
     //     Route::resource('lessons', \App\Http\Controllers\Students\LessonController::class);
     // });
 
+    Route::group(['middleware' => 'role:client', 'prefix' => 'client', 'as' => 'client.'], function () {
+        Route::resource('caribarang', \App\Http\Controllers\Client\CariBarangController::class);
+    });
+
+    Route::group(['middleware' => 'role:client', 'prefix' => 'client', 'as' => 'client.'], function () {
+        Route::resource('custom', \App\Http\Controllers\Client\CustomController::class);
+    });
+
+    Route::group(['middleware' => 'role:artist', 'prefix' => 'artist', 'as' => 'artist.'], function () {
+        Route::resource('pasangbarang', \App\Http\Controllers\Artist\PasangBarangController::class);
+    });
+
+    Route::group(['middleware' => 'role:artist', 'prefix' => 'artist', 'as' => 'artist.'], function () {
+        Route::resource('pasangcustom', \App\Http\Controllers\Artist\PasangCustomController::class);
+    });
+
+
+
     Route::group(['middleware' => 'role:kuli', 'prefix' => 'kuli', 'as' => 'kuli.'], function () {
         Route::resource('ajukandiri', \App\Http\Controllers\Kuli\AjukanDiriController::class);
     });
