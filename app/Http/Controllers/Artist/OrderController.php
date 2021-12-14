@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Artist;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use App\Models\User;
 
 
@@ -13,8 +14,10 @@ class OrderController extends Controller
 
     public function index(){
         // $client = User::all()->where('id', '=', '');
+        $client = User::all()->where('id', '=', request('order_id'));
+        $order = Order::all()->where('id', '=', request('order_id'));
 
-        return view('artist.pasangcustom.order');
+        return view('artist.pasangcustom.order', ['client' => $client, 'order' => $order]);
     }
 
 

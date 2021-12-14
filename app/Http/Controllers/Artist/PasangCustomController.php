@@ -30,17 +30,27 @@ class PasangCustomController extends Controller
         return view('artist.pasangcustom.detail', ['custom' => $custom, 'orders' => $orders]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function new(){
+        return view('artist.pasangcustom.buat');
+    }
 
-
-     
     public function create()
     {
         //
+        $user_id = auth()->user()->id;
+        Custom::create([
+            'user_id' => $user_id,
+            'name' => request('name'),
+            'description' => request('description'),
+            'category' => request('category'),
+            'city' => request('city'),
+            'base_price' => request('base_price'),
+            'estimated_time' => request('estimated_time'),
+            'stock' => request('stock'),
+            'file_path' => '/stisla/assets/img/example-image.jpg'
+        ]);
+
+        return redirect('artist/pasangcustom');
     }
 
     /**

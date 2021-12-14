@@ -38,6 +38,13 @@ Route::get('/artist/pasangcustom/detail', '\App\Http\Controllers\Artist\PasangCu
 
 Route::get('/artist/pasangcustom/detail/order', '\App\Http\Controllers\Artist\OrderController@index');
 
+Route::get('/artist/pasangcustom/buat', '\App\Http\Controllers\Artist\PasangCustomController@new');
+
+Route::get('/artist/pasangcustom/create', '\App\Http\Controllers\Artist\PasangCustomController@create');
+
+
+
+
 
 Route::get('/kuli/cariproyek/detail', '\App\Http\Controllers\Kuli\CariProyekController@detail');
 
