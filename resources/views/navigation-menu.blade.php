@@ -21,9 +21,9 @@
                     </x-jet-nav-link>
 
                     @if (auth()->user()->role_id == 2 || auth()->user()->role_id == 1)
-                        <x-jet-nav-link href="{{ route('client.caribarang.index') }}" :active="request()->routeIs('client.caribarang.index')">
+                        {{-- <x-jet-nav-link href="{{ route('client.caribarang.index') }}" :active="request()->routeIs('client.caribarang.index')">
                             {{ __('Cari Barang') }}
-                        </x-jet-nav-link>
+                        </x-jet-nav-link> --}}
 
                         <x-jet-nav-link href="{{ route('client.custom.index') }}" :active="request()->routeIs('client.custom.index')">
                             {{ __('Design Custom') }}
@@ -39,9 +39,9 @@
                     @endif
 
                     @if (auth()->user()->role_id == 3 || auth()->user()->role_id == 1)
-                        <x-jet-nav-link href="{{ route('artist.pasangbarang.index') }}" :active="request()->routeIs('artist.pasangbarang.index')">
+                        {{-- <x-jet-nav-link href="{{ route('artist.pasangbarang.index') }}" :active="request()->routeIs('artist.pasangbarang.index')">
                             {{ __('Pasang Barang') }}
-                        </x-jet-nav-link>
+                        </x-jet-nav-link> --}}
 
                         <x-jet-nav-link href="{{ route('artist.pasangcustom.index') }}" :active="request()->routeIs('artist.pasangcustom.index')">
                             {{ __('Pasang Design Custom') }}
@@ -60,9 +60,9 @@
                         </x-jet-nav-link> --}}
                     @endif
                     
-                    <x-jet-nav-link href="{{ route('artikel') }}" :active="request()->routeIs('artikel')">
+                    {{-- <x-jet-nav-link href="{{ route('artikel') }}" :active="request()->routeIs('artikel')">
                         {{ __('Artikel') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> --}}
                     
                 </div>
 

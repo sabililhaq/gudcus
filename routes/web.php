@@ -33,6 +33,12 @@ Route::post('/mandor/carikuli/detailkuli', function(){
 });
 
 
+//Artist
+Route::get('/artist/pasangcustom/detail', '\App\Http\Controllers\Artist\PasangCustomController@detail');
+
+Route::get('/artist/pasangcustom/detail/order', '\App\Http\Controllers\Artist\OrderController@index');
+
+
 Route::get('/kuli/cariproyek/detail', '\App\Http\Controllers\Kuli\CariProyekController@detail');
 
 Route::get('/kuli/cariproyek/daftar', '\App\Http\Controllers\Kuli\CariProyekController@apply');

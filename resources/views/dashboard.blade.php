@@ -32,6 +32,46 @@
         </div>
     </div>
 
+    <br><br><br><br>
+
+    <div class="container">
+        <div class="wizard-steps">
+            <div class="wizard-step wizard-step-active">
+              <div class="wizard-step-icon">
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <div class="wizard-step-label">
+                Design Custom
+              </div>
+            </div>
+            <div class="wizard-step wizard-step-active">
+              <div class="wizard-step-icon">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <div class="wizard-step-label">
+                Pembayaran DP
+              </div>
+            </div>
+            <div class="wizard-step wizard-step-active">
+              <div class="wizard-step-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <div class="wizard-step-label">
+                Pengiriman Produk
+              </div>
+            </div>
+            <div class="wizard-step wizard-step-success">
+              <div class="wizard-step-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="wizard-step-label">
+                Pesanan Selesai & Pelunasan
+              </div>
+            </div>
+          </div>
+
+    </div>
+
     {{-- <div class="container p-5">
         <div class="card p-5 bg-info">
             <div class="card-body">

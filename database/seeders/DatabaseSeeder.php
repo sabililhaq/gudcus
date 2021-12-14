@@ -19,6 +19,10 @@ class DatabaseSeeder extends Seeder
         $this->call(ProyekSeeder::class);
         $this->call(StatusSeeder::class);
         $this->call(ItemSeeder::class);
+        $this->call(CustomSeeder::class);
+        $this->call(OrderSeeder::class);
+
+
 
 
     }

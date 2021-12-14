@@ -2,39 +2,20 @@
 
 namespace App\Http\Controllers\Artist;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Models\Custom;
-use App\Models\Order;
-use Illuminate\Http\Request;
 
-class PasangCustomController extends Controller
+
+class OrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //
+
     public function index(){
-        $users = User::all();
-        $customs = Custom::all();
-        // $customs = Custom::where('user_id', '=' , auth()->id());
-        // return view('client.caribarang.index', ['users' => $users]);
-        return view('artist.pasangcustom.index', ['users' => $users, 'customs' => $customs]);
+        // $client = User::all()->where('id', '=', '');
+
+        return view('artist.pasangcustom.order');
     }
-
-    public function detail(){
-        $custom = Custom::all()->where('id', '=', request('custom_id'));
-        $orders =  Order::all()->where('custom_id', '=', request('custom_id'));
-
-        return view('artist.pasangcustom.detail', ['custom' => $custom, 'orders' => $orders]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
 
      
