@@ -29,6 +29,10 @@
                             {{ __('Design Custom') }}
                         </x-jet-nav-link>
 
+                        <x-jet-nav-link href="{{ route('client.order.index') }}" :active="request()->routeIs('client.order.index')">
+                            {{ __('Pesanan Anda') }}
+                        </x-jet-nav-link>
+
                         {{-- <x-jet-nav-link href="{{ route('kuli.ajukandiri.index') }}" :active="request()->routeIs('kuli.ajukandiri.index')">
                             {{ __('Ajukan Diri') }}
                         </x-jet-nav-link>

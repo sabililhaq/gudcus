@@ -42,6 +42,15 @@ Route::get('/artist/pasangcustom/buat', '\App\Http\Controllers\Artist\PasangCust
 
 Route::get('/artist/pasangcustom/create', '\App\Http\Controllers\Artist\PasangCustomController@create');
 
+//Client
+Route::get('/client/custom/detail', '\App\Http\Controllers\Client\CustomController@detail');
+
+Route::get('/client/custom/order', '\App\Http\Controllers\Client\CustomController@order');
+
+Route::get('/client/custom/new', '\App\Http\Controllers\Client\CustomController@new');
+
+
+
 
 
 
@@ -111,6 +120,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['middleware' => 'role:client', 'prefix' => 'client', 'as' => 'client.'], function () {
         Route::resource('custom', \App\Http\Controllers\Client\CustomController::class);
+    });
+
+    Route::group(['middleware' => 'role:client', 'prefix' => 'client', 'as' => 'client.'], function () {
+        Route::resource('order', \App\Http\Controllers\Client\PesananController::class);
     });
 
     Route::group(['middleware' => 'role:artist', 'prefix' => 'artist', 'as' => 'artist.'], function () {
