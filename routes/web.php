@@ -42,6 +42,14 @@ Route::get('/artist/pasangcustom/buat', '\App\Http\Controllers\Artist\PasangCust
 
 Route::get('/artist/pasangcustom/create', '\App\Http\Controllers\Artist\PasangCustomController@create');
 
+Route::get('/artist/tambahstok', '\App\Http\Controllers\Artist\PasangCustomController@tambah');
+
+Route::get('/artist/kurangstok', '\App\Http\Controllers\Artist\PasangCustomController@kurang');
+
+Route::get('/artist/pasangcustom/delete', '\App\Http\Controllers\Artist\PasangCustomController@delete');
+
+
+
 //Client
 Route::get('/client/custom/detail', '\App\Http\Controllers\Client\CustomController@detail');
 

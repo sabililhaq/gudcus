@@ -33,8 +33,25 @@
 
 
                         <div class="mb-2 mt-3">
-                            <div class="text-small font-weight-bold">Stock: {{ $c->stock }}</div>
+                            <div class="text-small font-weight-bold">Stock: 
+                                
+                                {{ $c->stock }} </div>
                         </div>
+                        <div class="mb-2 mt-3">
+                            <form action="{{ url('#') }}" method="get">
+                                @csrf
+                                <input type="hidden" id="custom_id" name="custom_id" value = {{ $c->id }}>
+                                <button type="submit" class="btn btn-icon btn-primary"><i class="fa fa-plus"> Tambah Stok</i></button>
+                            </form>
+                            <br>
+                            <form action="{{ url('#') }}" method="get">
+                                @csrf
+                                <input type="hidden" id="custom_id" name="custom_id" value = {{ $c->id }}>
+                                <button type="submit" class="btn btn-icon btn-warning"><i class="fa fa-minus"> Kurangi Stok</i></button>
+                            </form>
+                        </div>
+
+                        
                         {{-- <a href="#" class="btn btn-social-icon mr-1 btn-facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a> --}}
@@ -146,9 +163,34 @@
                 </div>
             </div>
         </div>
+        <br>
+
+        @foreach ($custom as $c)
+            
+        @endforeach
+        <div class="row">
+            <form action="{{ url('/artist/pasangcustom/delete') }}" method="get">
+                @csrf
+                <input type="hidden" id="custom_id" name="custom_id" value = {{ $c->id }}>
+                <button type="submit" class="btn btn-icon btn-danger">  <i class="fa fa-trash"> Hapus Design Custom</i></button>
+            </form>
+        </div>
     </div>
 
+    <script>
+        deleteButtons = document.querySelectorAll('.btn-danger');
+        deleteButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                let konfirmasi = confirm(
+                    'Apakah anda yakin menghapus Design Custom ini?');
+            });
+        });
+
+    </script>
+
     <br><br>
+
+    
 
 
 

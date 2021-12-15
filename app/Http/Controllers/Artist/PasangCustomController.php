@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Custom;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PasangCustomController extends Controller
 {
@@ -49,6 +51,29 @@ class PasangCustomController extends Controller
             'stock' => request('stock'),
             'file_path' => '/stisla/assets/img/example-image.jpg'
         ]);
+
+        return redirect('artist/pasangcustom');
+    }
+
+    public function tambah(){
+
+    }
+
+    public function kurang(){
+
+    }
+
+    public function delete(){
+        $id = request('custom_id');
+        DB::delete('delete from customs where id = '.$id);
+        // $users = User::all()->where('proyek_id', '=', request('proyek_id'));
+        // foreach($users as $user){
+        //     $user->applying = '0';
+        //     $user->proyek_id = '0';
+        //     $user->status_id = '8';
+        //     $user->works_under = null;
+        //     $user->save();
+        // }
 
         return redirect('artist/pasangcustom');
     }
