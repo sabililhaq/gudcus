@@ -57,10 +57,42 @@ class PasangCustomController extends Controller
 
     public function tambah(){
 
+        $custom = Custom::all()->where('id', '=', request('custom_id'));
+        $stock = -1;
+
+        foreach ($custom as $c) {
+            $stock = $c->stock;
+            $stock += 1;
+            $c->stock = $stock;
+            $c->save();
+
+        }
+
+
+        $orders =  Order::all()->where('custom_id', '=', request('custom_id'));
+
+        return view('artist.pasangcustom.detail', ['custom' => $custom, 'orders' => $orders]);
+    
     }
 
     public function kurang(){
 
+
+        $custom = Custom::all()->where('id', '=', request('custom_id'));
+        $stock = -1;
+
+        foreach ($custom as $c) {
+            $stock = $c->stock;
+            $stock -= 1;
+            $c->stock = $stock;
+            $c->save();
+        }
+
+
+        $orders =  Order::all()->where('custom_id', '=', request('custom_id'));
+
+        return view('artist.pasangcustom.detail', ['custom' => $custom, 'orders' => $orders]);
+    
     }
 
     public function delete(){

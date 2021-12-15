@@ -38,13 +38,13 @@
                                 {{ $c->stock }} </div>
                         </div>
                         <div class="mb-2 mt-3">
-                            <form action="{{ url('#') }}" method="get">
+                            <form action="{{ url('/artist/tambahstok') }}" method="get">
                                 @csrf
                                 <input type="hidden" id="custom_id" name="custom_id" value = {{ $c->id }}>
                                 <button type="submit" class="btn btn-icon btn-primary"><i class="fa fa-plus"> Tambah Stok</i></button>
                             </form>
                             <br>
-                            <form action="{{ url('#') }}" method="get">
+                            <form action="{{ url('/artist/kurangstok') }}" method="get">
                                 @csrf
                                 <input type="hidden" id="custom_id" name="custom_id" value = {{ $c->id }}>
                                 <button type="submit" class="btn btn-icon btn-warning"><i class="fa fa-minus"> Kurangi Stok</i></button>
