@@ -48,7 +48,7 @@
                           <i class="fas fa-edit"></i>
                         </div>
                         <h2>Tambahkan Custom Design</h2>
-                        <a href="{{ url('/artist/pasangcustom/buat') }}" class="btn btn-primary mt-4">Tambah</a>
+                        <a href="{{ url('/artist/pasangcustom/buat') }}" rel="stylesheet" class="btn btn-primary mt-4">Tambah</a>
                       </div>
                     {{-- </div> --}}
                   {{-- </div> --}}

@@ -57,6 +57,9 @@ Route::get('/client/custom/order', '\App\Http\Controllers\Client\CustomControlle
 
 Route::get('/client/custom/new', '\App\Http\Controllers\Client\CustomController@new');
 
+Route::get('/client/order/detail', '\App\Http\Controllers\Client\PesananController@detail');
+
+
 
 
 

@@ -68,11 +68,11 @@
                                         </td>
                                         <td>{{ $order->created_at }}</td>
                                         <td>
-                                            <div class="badge badge-success">Completed</div>
+                                            <div class="badge badge-warning">Belum Dikirim</div>
                                         </td>
                                         <td>
                                             {{-- <a href="#" class="btn btn-secondary">Detail</a> --}}
-                                            <form action="{{url('#')}}" method="get">
+                                            <form action="{{url('/client/order/detail')}}" method="get">
                                                 @csrf
                                                 <input type="hidden" id="order_id" name="order_id" value={{ $order->id }}>
                                                 <button type="submit" class="btn btn-primary">Detail</a>

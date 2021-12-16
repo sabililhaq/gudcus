@@ -13,4 +13,12 @@ class PesananController extends Controller
         // return view('client.caribarang.index', ['users' => $users]);
         return view('client.order.index', ['orders' => $orders]);
     }
+
+    public function detail(){
+        $order = Order::all()->where('id', '=', request('order_id'));
+
+
+
+        return view('client.order.detail', ['order' => $order]);
+    }
 }
