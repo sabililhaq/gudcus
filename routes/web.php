@@ -145,6 +145,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('pasangcustom', \App\Http\Controllers\Artist\PasangCustomController::class);
     });
 
+    Route::group(['middleware' => 'role:artist', 'prefix' => 'artist', 'as' => 'artist.'], function () {
+        Route::resource('riwayat', \App\Http\Controllers\Artist\RiwayatController::class);
+    });
+
 
 
     Route::group(['middleware' => 'role:kuli', 'prefix' => 'kuli', 'as' => 'kuli.'], function () {

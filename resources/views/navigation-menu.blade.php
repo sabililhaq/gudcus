@@ -51,6 +51,10 @@
                             {{ __('Pasang Design Custom') }}
                         </x-jet-nav-link>
 
+                        <x-jet-nav-link href="{{ route('artist.riwayat.index') }}" :active="request()->routeIs('artist.riwayat.index')">
+                            {{ __('Riwayat Pesanan') }}
+                        </x-jet-nav-link>
+
                         {{-- <x-jet-nav-link href="{{ route('mandor.carikuli.index') }}" :active="request()->routeIs('mandor.carikuli.index')">
                             {{ __('Cari Kuli') }}
                         </x-jet-nav-link>
