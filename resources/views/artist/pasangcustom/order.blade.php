@@ -39,10 +39,28 @@
 
           <div class="row">
             <div class="col">
-              Status Pembayaran: asdasd
+              Status Pembayaran: 
+              @if ($o->status == "1")
+                                        <div class="badge badge-warning">Belum dibayar</div>
+                                        @elseif($o->status == "2")
+                                        <div class="badge badge-info">Sudah bayar DP</div>
+                                        @elseif($o->status == "3")
+                                        <div class="badge badge-success">Lunas</div>
+                                        @else
+                                        <div class="badge badge-secondary">Tidak Diketahui</div>
+                                        @endif
             </div>
             <div class="col">
-              Status Pengiriman: asdasd
+              Status Pengiriman:
+              @if ($o->delivery_status == "1")
+              <div class="badge badge-secondary">Belum dibuat</div>
+              @elseif($o->delivery_status == "2")
+              <div class="badge badge-warning">Dibuat</div>
+              @elseif($o->delivery_status == "3")
+              <div class="badge badge-info">Dikirim</div>
+              @else
+              <div class="badge badge-success">Terkirim</div>
+              @endif
 
             </div>
           </div>
@@ -57,15 +75,6 @@
       <div class="float-left mt-sm-0 mt-3">
       <br><br>
 
-      <div class="container">
-        <div class="row">
-          <div class="col">asd</div>
-          <div class="col">asd</div>
-          <div class="col">asd</div>
-          <div class="col">asd</div>
-
-        </div>
-      </div>
       </div>
     </div>
 

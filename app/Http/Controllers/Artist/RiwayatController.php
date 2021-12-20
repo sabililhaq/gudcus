@@ -10,22 +10,36 @@ use App\Models\User;
 
 use App\Models\Order;
 use App\Models\Custom;
-
-
+use Illuminate\Database\Console\DumpCommand;
 
 class RiwayatController extends Controller
 {
     //
 
     public function index(){
-        $customs = Custom::all()->where('user_id', '=', auth()->user()->id);
+        // // $customs = Custom::all()->where('user_id', '=', auth()->user()->id);
+        // $customs = Custom::all();
+        // $orders = Order::all();
+        // // dump($orders);
+        // $items = $orders->union($customs);
+        // // dump($items);
 
-        // $orders = Order::all->where('custom_id', '=', $customs);
+        // $items = $items->where('user_id', '=', auth()->user()->id);
+        // // dump($items);
+
+        // // dump($items->description);
+
+        // // $orders = Order::all()->where('asd');
+
+        // // $orders = Order::all->where('custom_id', '=', $customs);
+        // $users = User::all();
+        // // $orders = Order::all();
+
         $users = User::all();
-        $orders = Order::all();
+        $items = Order::all();
         
 
-        return view('artist.riwayat.index', ['users' => $users, 'orders' => $orders]);
+        return view('artist.riwayat.index', ['users' => $users, 'orders' => $items]);
     }
 
     public function show($id)

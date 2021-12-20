@@ -10,13 +10,14 @@
         <form method="POST" action="{{ route('register') }}" x-data="{role_id: 2}">
             @csrf
 
+            <input type="hidden" name="kuli_specialties" id="kuli_specialties" value="dummy">
             <div class="mt-4">
                 <x-jet-label for="role_id" value="{{ __('Daftar sebagai:') }}" />
                 <select name="role_id" x-model="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                    <option value="2">Customer</option>
-                    <option value="3">Artist / Seller</option>
+                    <option value="2">Client</option>
+                    <option value="3">Artist</option>
                 </select>
-            </div>
+            </div><br>
 
             <div>
                 <x-jet-label for="name" value="{{ __('Nama') }}" />

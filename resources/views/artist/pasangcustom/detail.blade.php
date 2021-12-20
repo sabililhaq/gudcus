@@ -135,7 +135,16 @@
                                         </td>
                                         <td>{{ $order->created_at }}</td>
                                         <td>
-                                            <div class="badge badge-success">Completed</div>
+                                            {{-- <div class="badge badge-success">Completed</div> --}}
+                                            @if ($order->delivery_status == "1")
+                                            <div class="badge badge-secondary">Belum dibuat</div>
+                                            @elseif($order->delivery_status == "2")
+                                            <div class="badge badge-warning">Dibuat</div>
+                                            @elseif($order->delivery_status == "3")
+                                            <div class="badge badge-info">Dikirim</div>
+                                            @else
+                                            <div class="badge badge-success">Terkirim</div>
+                                            @endif
                                         </td>
                                         <td>
                                             {{-- <a href="#" class="btn btn-secondary">Detail</a> --}}
